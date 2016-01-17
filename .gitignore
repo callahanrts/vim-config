@@ -7,6 +7,7 @@ Session.vim
 *~
 
 # Repo specific
+autoload
 undodir
 backup
 plugged
