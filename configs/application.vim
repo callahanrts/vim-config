@@ -18,6 +18,7 @@ set undofile                        " Maintain undo history between sessions
 set undodir=~/.nvim/undodir         " Set directory for undo files
 let mapleader=" "                   " Change leader key to space
 set nrformats=                      " Treat all numbers as decimal (I rarely use bin/octal/hex)
+set notimeout
 
 if !has('gui_running')
   set encoding=utf8 " This can't be set after start up

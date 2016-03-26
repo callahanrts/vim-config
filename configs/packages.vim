@@ -29,6 +29,8 @@ Plug 'benekastah/neomake'                     " Syntax checking
 "Plug 'Shougo/deoplete.nvim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+Plug 'tpope/vim-commentary'
+
 
 " For looks
 Plug 'itchyny/lightline.vim'
