@@ -11,7 +11,7 @@ LuciusDarkLowContrast
 command! Light execute "LuciusLight"
 command! Dark execute "LuciusDarkLowContrast"
 
-set guifont=Inconsolata-g\ for\ Powerline:h12  " Favorite font, 12pt
+set guifont=Monaco\ for\ Powerline:h12  " Favorite font, 12pt
 
 
 " Tmux cursor shapes for vim
@@ -49,7 +49,7 @@ endfunction
 
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
-" faster escape in terminal nvim
+" Set timeout to one second for normal commands and 0 for escape
 if ! has('gui_running')
     set ttimeoutlen=10
     augroup FastEscape
@@ -58,6 +58,7 @@ if ! has('gui_running')
         au InsertLeave * set timeoutlen=1000
     augroup END
 endif
+
 
 if exists('+colorcolumn')
   set colorcolumn=100

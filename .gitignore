@@ -14,3 +14,6 @@ plugged
 shada
 vimwiki
 vimwiki_html
+
+# Mac Specific
+.DS_Store

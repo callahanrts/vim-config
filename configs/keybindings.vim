@@ -6,10 +6,7 @@
 "endfor
 
 " Remap escape to ctrl-c.
-map <C-c> <Esc>
-
-" C-c (2x) for C-c
-map <C-c><C-c> <C-c>
+inoremap <C-c> <Esc><Esc>
 
 " Toggle nerd tree
 map <Leader>d :NERDTreeToggle<CR>
@@ -22,14 +19,10 @@ nmap <c-t>n :tabnew<CR>
 nmap <c-t>x :tabclose<CR>
 
 " Unite keybindings
-" map <c-x>b :Unite buffer -direction=botright<CR>i
-map <c-x>b Buffers
-" map <c-x>f :Unite file_rec/async -start-insert -no-split<CR>
-map <c-x>f :FZF<CR>
-map <c-x><c-f> :cd ~/
-"map <c-x>a :Unite -no-split grep:.<CR>
-map <c-x>a :Ag<space>
-map <c-x>%:Unite -no-split grep:%<CR>
+nmap <c-x>b :Buffers<CR>
+nmap <c-x>f :FZF<CR>
+nmap <c-x><c-f> :cd ~/
+nmap <c-x>a :Ag<space>
 
 " Clear / search
 nmap <Leader>/ :nohlsearch<CR>
@@ -41,6 +34,8 @@ nnoremap * *zz
 nnoremap # #zz
 nnoremap g* g*zz
 nnoremap g# g#zz
+
+" Backspace swap window with latest buffer
 nnoremap <BS> <C-^>
 
 " Fugitive Bindings

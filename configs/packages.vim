@@ -29,8 +29,9 @@ Plug 'benekastah/neomake'                     " Syntax checking
 "Plug 'Shougo/deoplete.nvim'
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
-Plug 'tpope/vim-commentary'
-
+Plug 'ternjs/tern_for_vim'
+Plug 'tpope/vim-commentary' " Comment stuff
+Plug 'terryma/vim-multiple-cursors' " Multiple cursors
 
 " For looks
 Plug 'itchyny/lightline.vim'
@@ -43,6 +44,8 @@ Plug 'kchmck/vim-coffee-script',   { 'for': 'coffee' }
 Plug 'tpope/vim-haml',             { 'for': 'haml' }
 Plug 'pangloss/vim-javascript',    { 'for': 'js' }
 Plug 'fatih/vim-go',               { 'for': 'go' }
+Plug 'vim-scripts/lua.vim',        { 'for': 'lua' }
+  Plug 'vim-scripts/vim-misc'
 
 " From vimcolors.com
 Plug 'jonathanfilip/vim-lucius'

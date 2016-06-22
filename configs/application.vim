@@ -5,7 +5,8 @@
 set nocompatible                    " Be iMproved
 filetype off                        " required!
 set number                          " Set line numbers
-syntax on                           " Turn on Syntax Highlighting
+" Automatic in neovim
+" syntax on                         " Turn on Syntax Highlighting
 set autoread                        " Automatically reload changes if detected
 set ruler                           " Location in status line
 set laststatus=2                    " Always display the status line
@@ -17,8 +18,9 @@ let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1 " Enable different cursor shapes
 set undofile                        " Maintain undo history between sessions
 set undodir=~/.nvim/undodir         " Set directory for undo files
 let mapleader=" "                   " Change leader key to space
-set nrformats=                      " Treat all numbers as decimal (I rarely use bin/octal/hex)
-set notimeout
+
+" Automatically resize splits to equal sizes when vim is resized
+autocmd VimResized * wincmd =
 
 if !has('gui_running')
   set encoding=utf8 " This can't be set after start up
