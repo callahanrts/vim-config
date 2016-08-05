@@ -11,13 +11,18 @@ set autoread                        " Automatically reload changes if detected
 set ruler                           " Location in status line
 set laststatus=2                    " Always display the status line
 set scrolloff=3                     " Keep 3 lines below and above the cursor
-set clipboard=unnamed               " Share clipboard with os x
 set noshowmode                      " Don't show default insert (handled by lightline)
 set foldmethod=marker               " Use markers for folding
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1 " Enable different cursor shapes
 set undofile                        " Maintain undo history between sessions
 set undodir=~/.nvim/undodir         " Set directory for undo files
 let mapleader=" "                   " Change leader key to space
+
+if has('unix')
+  set clipboard=unnamedplus           " Share clipboard with os x
+else
+  set clipboard=unnamed               " Share clipboard with os x
+endif
 
 " Automatically resize splits to equal sizes when vim is resized
 autocmd VimResized * wincmd =

@@ -45,10 +45,6 @@ if exists('$ITERM_PROFILE')
   endif
 end
 
-if has("nvim")
-  set termguicolors
-endif
-
 " Terminal + Tmux pasting
 function! WrapForTmux(s)
   if !exists('$TMUX')
