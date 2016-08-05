@@ -46,6 +46,7 @@ Plug 'pangloss/vim-javascript',    { 'for': 'js' }
 Plug 'fatih/vim-go',               { 'for': 'go' }
 Plug 'vim-scripts/lua.vim',        { 'for': 'lua' }
   Plug 'vim-scripts/vim-misc'
+Plug 'leafgarland/typescript-vim'
 
 " From vimcolors.com
 Plug 'jonathanfilip/vim-lucius'

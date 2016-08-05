@@ -14,7 +14,7 @@ for f in split(glob('~/.config/nvim/configs/plugins/*.vim'), '\n')
 endfor
 
 " Include functions
-source ~/.config/nvim/configs/functions.vim
+" source ~/.config/nvim/configs/functions.vim
 
 " Include keybindings
 source ~/.config/nvim/configs/keybindings.vim
