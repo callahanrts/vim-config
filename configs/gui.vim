@@ -11,20 +11,20 @@ LuciusDarkLowContrast
 command! Light execute "LuciusLight"
 command! Dark execute "LuciusDarkLowContrast"
 
-set guifont=Inconsolata-g\ for\ Powerline:h12  " Favorite font, 12pt
+"set guifont=Inconsolata-g\ for\ Powerline:h12  " Favorite font, 12pt
 
 
 " Tmux cursor shapes for vim
-if exists('$ITERM_PROFILE')
-  set mouse=a
-  if exists('$TMUX')
-    let &t_SI = "\<Esc>[3 q"
-    let &t_EI = "\<Esc>[0 q"
-  else
-    let &t_SI = "\<Esc>]50;CursorShape=1\x7"
-    let &t_EI = "\<Esc>]50;CursorShape=0\x7"
-  endif
-end
+" if exists('$ITERM_PROFILE')
+"   set mouse=a
+"   if exists('$TMUX')
+"     let &t_SI = "\<Esc>[3 q"
+"     let &t_EI = "\<Esc>[0 q"
+"   else
+"     let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"     let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+"   endif
+" end
 
 " Terminal + Tmux pasting
 function! WrapForTmux(s)
@@ -50,14 +50,14 @@ endfunction
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 " faster escape in terminal nvim
-if ! has('gui_running')
-    set ttimeoutlen=10
-    augroup FastEscape
-        autocmd!
-        au InsertEnter * set timeoutlen=0
-        au InsertLeave * set timeoutlen=1000
-    augroup END
-endif
+" if ! has('gui_running')
+"     set ttimeoutlen=10
+"     augroup FastEscape
+"         autocmd!
+"         au InsertEnter * set timeoutlen=0
+"         au InsertLeave * set timeoutlen=1000
+"     augroup END
+" endif
 
 if exists('+colorcolumn')
   set colorcolumn=100

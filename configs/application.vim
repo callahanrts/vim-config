@@ -10,7 +10,6 @@ set autoread                        " Automatically reload changes if detected
 set ruler                           " Location in status line
 set laststatus=2                    " Always display the status line
 set scrolloff=3                     " Keep 3 lines below and above the cursor
-set clipboard=unnamed               " Share clipboard with os x
 set noshowmode                      " Don't show default insert (handled by lightline)
 set foldmethod=marker               " Use markers for folding
 let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1 " Enable different cursor shapes
@@ -19,6 +18,8 @@ set undodir=~/.nvim/undodir         " Set directory for undo files
 let mapleader=" "                   " Change leader key to space
 set nrformats=                      " Treat all numbers as decimal (I rarely use bin/octal/hex)
 set notimeout
+"set clipboard=unnamed               " Share clipboard with os x
+set clipboard=unnamedplus           " Share clipboard with X server
 
 if !has('gui_running')
   set encoding=utf8 " This can't be set after start up
