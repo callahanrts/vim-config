@@ -17,7 +17,6 @@ Plug 'godlygeek/tabular'                      " Align text
 Plug 'vim-scripts/repeat.vim'                 " Repeat plugin commands (not just native) using .
 Plug 'vim-scripts/AdvancedSorters'            " Sort functions/paragraphs/visual blocks/etc
   Plug 'vim-scripts/ingo-library'             " AdvancedSorters requires it
-Plug 'wakatime/vim-wakatime'                  " Waka time
 Plug 'majutsushi/tagbar'                      " Visual representation of classes
 Plug 'SirVer/ultisnips'                       " Snippets
   Plug 'honza/vim-snippets'                   " Snippets are separated from the engine.
@@ -32,6 +31,7 @@ Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 Plug 'ternjs/tern_for_vim'
 Plug 'tpope/vim-commentary' " Comment stuff
 Plug 'terryma/vim-multiple-cursors' " Multiple cursors
+Plug 'sbdchd/neoformat' " Format code js-beautify etc
 
 " For looks
 Plug 'itchyny/lightline.vim'
@@ -45,6 +45,7 @@ Plug 'tpope/vim-haml',             { 'for': 'haml' }
 Plug 'pangloss/vim-javascript',    { 'for': 'js' }
 Plug 'fatih/vim-go',               { 'for': 'go' }
 Plug 'vim-scripts/lua.vim',        { 'for': 'lua' }
+Plug 'rust-lang/rust.vim'
   Plug 'vim-scripts/vim-misc'
 Plug 'leafgarland/typescript-vim'
 
