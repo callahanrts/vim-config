@@ -2,9 +2,22 @@
 " ==============================================================================================
 " NERDTree configuration
 " ==============================================================================================
-let NERDTreeIgnore=['\.pyc$', '\.rbc$', '\~$']
-let NERDTreeChDirMode=2
-let NERDTreeShowBookmarks = 1
+let g:NERDTreeIgnore = ['\.pyc$', '\.rbc$', '\~$']
+let g:NERDTreeChDirMode = 2
 
-" NERDTreeTabs
-let g:nerdtree_tabs_open_on_gui_startup = 0
+" Start with bookmarks displayed
+let g:NERDTreeShowBookmarks = 0
+
+" Disable display of '?' text and 'Bookmarks' label.
+let g:NERDTreeMinimalUI=1
+
+" Increase the size of nerdtree a bit
+let g:NERDTreeWinSize=36
+
+" Use some nicer looking arrows
+let g:NERDTreeDirArrowExpandable = '➙'
+let g:NERDTreeDirArrowCollapsible = '➔'
+
+" Let <Leader><Leader> (^#) return from NERDTree window.
+let g:NERDTreeCreatePrefix='silent keepalt keepjumps'
+

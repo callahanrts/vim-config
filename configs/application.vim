@@ -27,6 +27,8 @@ endif
 " Automatically resize splits to equal sizes when vim is resized
 autocmd VimResized * wincmd =
 
+autocmd FileType markdown set spell
+
 if !has('gui_running')
   set encoding=utf8 " This can't be set after start up
 endif
@@ -69,6 +71,7 @@ set smartcase
 au BufRead,BufNewFile *.coffee    set filetype=coffee " associate *.js.coffee with coffee filetype
 au BufNewFile,BufReadPost *.jade  set filetype=jade
 au BufNewFile,BufReadPost *.styl  set filetype=stylus
+au BufRead,BufNewFile *.raml set ft=yaml
 au BufRead,BufNewFile *.go set filetype=go
 autocmd FileType go setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd BufRead,BufNewFile *.es6 *.es setfiletype javascript

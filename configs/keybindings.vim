@@ -1,15 +1,13 @@
-" Unbind the cursor keys in insert, normal and visual modes.
-"for prefix in ['i', 'n', 'v']
-"  for key in ['<C-[>', '<Up>', '<Down>', '<Left>', '<Right>']
-"    exe prefix . "noremap " . key . " <Nop>"
-"  endfor
-"endfor
 
 " Remap escape to ctrl-c.
 inoremap <C-c> <Esc><Esc>
 
 " Toggle nerd tree
-map <Leader>d :NERDTreeToggle<CR>
+nmap <Leader>d :NERDTreeToggle<CR>
+" nmap <Leader>d :VimFilerSplit -winwidth=35 -columns="type"<CR>
+" nmap <Leader>d :VimFiler -explorer -explorer-columns="" -parent=1 -auto-cd=1 -status=0<CR>
+
+nmap <Leader>e :Tagbar<CR>
 
 " Application Bindings
 map <leader>s :w<CR>
@@ -48,6 +46,12 @@ map <Leader>a :Tabularize /
 tnoremap <esc> <C-\><C-n>
 tnoremap <C-o> <C-\><C-n>:q<CR>
 nnoremap <C-s> :split<CR><C-w>j :term<CR>
+
+"----------------------------------
+" Toggle settings shortcuts
+" Toggle Syntastic
+nnoremap <leader>ts :ALEToggle<CR>
+"----------------------------------
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>

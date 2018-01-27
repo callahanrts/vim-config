@@ -208,7 +208,6 @@ hi link diffBDiffer        WarningMsg
 hi link diffCommon         WarningMsg
 hi link diffDiffer         WarningMsg
 hi link diffIdentical      WarningMsg
-hi link diffIsA            WarningMsg
 hi link diffNoEOL          WarningMsg
 hi link diffOnly           WarningMsg
 hi link diffRemoved        WarningMsg

@@ -1,6 +1,11 @@
 " ==============================================================================================
 " VIMRC Configurations
 " ==============================================================================================
+"
+let g:python2_host_prog = '/usr/local/bin/python'
+let g:python3_host_prog = '/usr/local/bin/python3'
+
+set encoding=utf-8
 
 " Set application settings for neovim
 source ~/.config/nvim/configs/application.vim
@@ -13,12 +18,10 @@ for f in split(glob('~/.config/nvim/configs/plugins/*.vim'), '\n')
   exe 'source' f
 endfor
 
-" Include functions
-" source ~/.config/nvim/configs/functions.vim
-
 " Include keybindings
 source ~/.config/nvim/configs/keybindings.vim
 
 " Include neovim gui settings
 source ~/.config/nvim/configs/gui.vim
 
+source ~/.config/nvim/configs/one_override.vim
