@@ -9,6 +9,7 @@ Plug 'tpope/vim-surround'                     " Surrounding text with stuff
 Plug 'gorkunov/smartpairs.vim'                " Select pairs of things (eg. vi', vi<)
 " Plug 'suan/vim-instant-markdown'              " Realtime markdown editing
 Plug 'tpope/vim-fugitive'                     " Github shit
+  Plug 'tpope/vim-rhubarb'                    " Fugitive is the Git, rhubarb is the hub
 Plug 'godlygeek/tabular'                      " Align text
 Plug 'vim-scripts/repeat.vim'                 " Repeat plugin commands (not just native) using .
 Plug 'vim-scripts/AdvancedSorters'            " Sort functions/paragraphs/visual blocks/etc
