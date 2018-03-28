@@ -21,7 +21,10 @@ endfor
 " Include keybindings
 source ~/.config/nvim/configs/keybindings.vim
 
+" Override vim-one after the colorscheme is changed
+command! OneOverride source ~/.config/nvim/configs/one_override.vim
+autocmd ColorScheme * OneOverride
+
 " Include neovim gui settings
 source ~/.config/nvim/configs/gui.vim
 
-source ~/.config/nvim/configs/one_override.vim
