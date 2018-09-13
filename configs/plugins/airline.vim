@@ -13,3 +13,8 @@ let g:airline_section_c = '%t'
 let g:airline_section_z = '%l:%c'
 
 let g:airline_theme='one'
+
+
+" Attempting to increase performance
+let g:airline_highlighting_cache = 1
+let g:airline_extensions = ['branch', 'tabline']

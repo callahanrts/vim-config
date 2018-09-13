@@ -47,6 +47,12 @@ tnoremap <esc> <C-\><C-n>
 tnoremap <C-o> <C-\><C-n>:q<CR>
 nnoremap <C-s> :split<CR><C-w>j :term<CR>
 
+" Movement
+let g:BASH_Ctrl_j = 'off'
+" "let g:BASH_Ctrl_k = 'off'
+noremap <C-j> }
+noremap <C-k> {
+
 "----------------------------------
 " Toggle settings shortcuts
 " Toggle Syntastic
