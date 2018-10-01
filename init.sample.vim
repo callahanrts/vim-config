@@ -10,8 +10,14 @@ set encoding=utf-8
 " Set application settings for neovim
 source ~/.config/nvim/configs/application.vim
 
-" Packages that should be managed by neovim Plugged
-source ~/.config/nvim/configs/packages.vim
+" PLUGGED STUFF
+call plug#begin('~/.nvim/plugged')
+  " Packages that should be managed by neovim Plugged
+  source ~/.config/nvim/configs/packages.vim
+
+  " Include personal packages here and run :PlugInstall
+  " source ~/.config/nvim/user/packages.vim
+call plug#end()
 
 " Source all package configurations
 for f in split(glob('~/.config/nvim/configs/plugins/*.vim'), '\n')
