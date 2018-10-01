@@ -17,3 +17,5 @@ vimwiki_html
 
 # Mac Specific
 .DS_Store
+
+init.vim
