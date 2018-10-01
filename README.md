@@ -26,8 +26,15 @@ configs/plugins/gitgutter.vim
 
 # Keybindings
 
-| Key        | Action                    |
-|------------|---------------------------|
-| <Leader>op | Open Project (NERDTree)   |
-| <Leader>ot | Open Terminal             |
-| <Leader>tt | Toggle theme (Dark/Light) |
+|Key         |Action                         |
+|------------|----------------------------   |
+|<Leader>op  |Open Project (NERDTree)        |
+|<Leader>ot  |Open Terminal                  |
+|<Leader>og  |Open file in Github            |
+|<Leader>tt  |Toggle theme (Dark/Light)      |
+|<Leader>ts  |Toggle ALE (Linting)           |
+|<Leader>/   |Clear previous search          |
+|<Leader>a   |Trigger Tabularize (formatting)|
+|<c-t>n      |Create new tab                 |
+|<c-t>x      |Delete a tab                   |
+|Backspace   |Switch to last opened buffer   |
