@@ -2,25 +2,21 @@
 " Remap escape to ctrl-c.
 inoremap <C-c> <Esc><Esc>
 
-" Toggle nerd tree
+" Open nerd tree
 nmap <Leader>d :NERDTreeToggle<CR>
-" nmap <Leader>d :VimFilerSplit -winwidth=35 -columns="type"<CR>
-" nmap <Leader>d :VimFiler -explorer -explorer-columns="" -parent=1 -auto-cd=1 -status=0<CR>
 
-nmap <Leader>e :Tagbar<CR>
-
-" Application Bindings
+" Save files faster
 map <leader>s :w<CR>
 
 " Tab Bindings
 nmap <c-t>n :tabnew<CR>
 nmap <c-t>x :tabclose<CR>
 
-" Unite keybindings
+" File / Code searching
 nmap <c-x>b :Buffers<CR>
 nmap <c-x>f :FZF<CR>
-nmap <c-x><c-f> :cd ~/
 nmap <c-x>a :Ag<space>
+nmap <c-x><c-f> :cd ~/
 
 " Clear / search
 nmap <Leader>/ :nohlsearch<CR>
@@ -49,15 +45,17 @@ nnoremap <C-s> :split<CR><C-w>j :term<CR>
 
 " Movement
 let g:BASH_Ctrl_j = 'off'
-" "let g:BASH_Ctrl_k = 'off'
 noremap <C-j> }
 noremap <C-k> {
 
-"----------------------------------
-" Toggle settings shortcuts
-" Toggle Syntastic
+
+" --------------------------
+" Leader t
 nnoremap <leader>ts :ALEToggle<CR>
-"----------------------------------
+
+" Toggle background color (light and dark theme)
+map <Leader>tt :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+" --------------------------
 
 " Show syntax highlighting groups for word under cursor
 nmap <C-S-P> :call <SID>SynStack()<CR>

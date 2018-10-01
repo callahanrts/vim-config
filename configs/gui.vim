@@ -1,17 +1,12 @@
-" ==============================================================================================
+" --------------------------------------------------
 " Graphical Vim Settings
-" ==============================================================================================
-
-set background=dark
-let g:one_allow_italics = 1
-colorscheme one
+" --------------------------------------------------
 
 set fillchars+=vert:⎜
 set cursorline
-
-"Use 24-bit (true-color) mode in Vim/Neovim when outside tmux.
-"If you're using tmux version 2.2 or later, you can remove the outermost $TMUX check and use tmux's 24-bit color support
-"(see < http://sunaku.github.io/tmux-24bit-color.html#usage > for more information.)
+set background=dark
+let g:one_allow_italics = 1
+colorscheme one
 
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -73,7 +68,6 @@ endif
 
 
 if exists('+colorcolumn')
-  " Highlight columns 100 and 121 and beyond
-	" execute "set colorcolumn=100," . join(range(121,375), ',')
-  execute "set colorcolumn=".join(range(1,100), ',').join(range(100,120), ',')
+  " Use columns to highlight text area
+  execute "set colorcolumn=".join(range(1,80), ',').join(range(80,100), ',')
 endif
