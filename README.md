@@ -1,6 +1,4 @@
 
-# (Neo)Vim Config
-
 <img src="https://raw.githubusercontent.com/callahanrts/vim-config/master/images/ss2.png" width="100%"/>
 
 # Getting Started
@@ -25,3 +23,11 @@ within `init.vim`
 
 # Gitgutter glyphs
 configs/plugins/gitgutter.vim
+
+# Keybindings
+
+| Key        | Action                    |
+|------------|---------------------------|
+| <Leader>op | Open Project (NERDTree)   |
+| <Leader>ot | Open Terminal             |
+| <Leader>tt | Toggle theme (Dark/Light) |

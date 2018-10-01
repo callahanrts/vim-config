@@ -2,8 +2,14 @@
 " Remap escape to ctrl-c.
 inoremap <C-c> <Esc><Esc>
 
-" Open nerd tree
-nmap <Leader>d :NERDTreeToggle<CR>
+" Open...
+" nerd tree
+nmap <Leader>op :NERDTreeToggle<CR>
+
+" Terminal mode bindings
+tnoremap <esc> <C-\><C-n>
+tnoremap <C-o> <C-\><C-n>:q<CR>
+nnoremap <Leader>ot :split<CR><C-w>j :term<CR>
 
 " Save files faster
 map <leader>s :w<CR>
@@ -38,10 +44,6 @@ nnoremap <Leader>gb :.Gbrowse<CR>
 " Tabularize Bindings
 map <Leader>a :Tabularize /
 
-" Terminal mode bindings
-tnoremap <esc> <C-\><C-n>
-tnoremap <C-o> <C-\><C-n>:q<CR>
-nnoremap <C-s> :split<CR><C-w>j :term<CR>
 
 " Movement
 let g:BASH_Ctrl_j = 'off'
