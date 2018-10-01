@@ -1,7 +1,7 @@
 
 # (Neo)Vim Config
 
-<img src="https://raw.githubusercontent.com/callahanrts/dotfiles/master/images/nvim.png" width="100%"/>
+<img src="https://raw.githubusercontent.com/callahanrts/vim-config/master/images/ss2.png" width="100%"/>
 
 # Getting Started
 ```
