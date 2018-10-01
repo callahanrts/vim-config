@@ -30,6 +30,7 @@ configs/plugins/gitgutter.vim
 |------------|----------------------------   |
 |<Leader>op  |Open Project (NERDTree)        |
 |<Leader>ot  |Open Terminal                  |
+|<c-o>       |Close Terminal                 |
 |<Leader>og  |Open file in Github            |
 |<Leader>tt  |Toggle theme (Dark/Light)      |
 |<Leader>ts  |Toggle ALE (Linting)           |
