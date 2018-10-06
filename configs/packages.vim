@@ -15,10 +15,13 @@ Plug 'vimwiki/vimwiki'                        " VimWiki
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'                       " Fuzzy search
 Plug 'tpope/vim-commentary'                   " Comment stuff
+Plug 'tpope/vim-eunuch'                       " Vim support for some unix shell commands
 Plug 'vim-scripts/largefile'                  " Optimize opening giant files
-" Plug 'w0rp/ale'                               " Asynchronous Lint Engine
+Plug 'w0rp/ale'                               " Asynchronous Lint Engine
 " Plug 'ahw/vim-hooks'                          " Easy Vim Hooks
-" Plug 'jceb/vim-orgmode'                       " Org Mode
+Plug 'jceb/vim-orgmode'                       " Org Mode
+  Plug 'vim-scripts/utl.vim'
+
 
 " For looks
 Plug 'rakr/vim-one'                           " One Dark theme
@@ -31,6 +34,7 @@ Plug 'cakebaker/scss-syntax.vim',  { 'for': 'scss' }
 Plug 'JulesWang/css.vim',          { 'for': 'css' }
 Plug 'kchmck/vim-coffee-script',   { 'for': 'coffee' }
 Plug 'tpope/vim-haml',             { 'for': 'haml' }
+Plug 'python-mode/python-mode',    { 'for': 'py' }
 Plug 'pangloss/vim-javascript'
 Plug 'vim-scripts/lua.vim',        { 'for': 'lua' }
 Plug 'elixir-editors/vim-elixir'
