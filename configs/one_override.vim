@@ -14,4 +14,11 @@ if &background == "dark"
   " FZF Overrides
   call one#highlight("FZFfg", "", "2c323c", "")
   call one#highlight("FZFbg", "", "282c34", "")
+else
+
+  call one#highlight("Normal", "", "ececec", "")
+  call one#highlight("ColorColumn", "", "f9f9f9", "")
+
+  call one#highlight("CursorLine", '', 'ececec',  'none')
+  call one#highlight("NormalDark", "", "ececec", "")
 endif
