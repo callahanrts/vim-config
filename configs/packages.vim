@@ -40,3 +40,4 @@ Plug 'vim-scripts/lua.vim',        { 'for': 'lua' }
 Plug 'elixir-editors/vim-elixir'
 Plug 'ElmCast/elm-vim'
 Plug 'posva/vim-vue'
+Plug 'digitaltoad/vim-pug'

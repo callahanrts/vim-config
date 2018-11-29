@@ -22,3 +22,7 @@ else
   call one#highlight("CursorLine", '', 'ececec',  'none')
   call one#highlight("NormalDark", "", "ececec", "")
 endif
+
+
+" Hide Tildes
+hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg

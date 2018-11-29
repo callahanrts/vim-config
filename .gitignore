@@ -19,3 +19,5 @@ vimwiki_html
 .DS_Store
 
 init.vim
+
+vimwiki*
