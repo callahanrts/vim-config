@@ -21,6 +21,8 @@ Plug 'w0rp/ale'                               " Asynchronous Lint Engine
 " Plug 'ahw/vim-hooks'                          " Easy Vim Hooks
 Plug 'jceb/vim-orgmode'                       " Org Mode
   Plug 'vim-scripts/utl.vim'
+Plug 'janko-m/vim-test'
+Plug 'benmills/vimux'
 
 
 " For looks
