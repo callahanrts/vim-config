@@ -3,6 +3,7 @@ let g:ale_linters = {'javascript': ['eslint', 'flow']}
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
 \   'css': ['prettier'],
+\   'scss': ['prettier']
 \}
 
 let g:ale_javascript_prettier_options = '--single-quote --trailing-comma es5'
