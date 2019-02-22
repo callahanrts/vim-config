@@ -44,13 +44,6 @@ nnoremap <BS> <C-^>
 " Tabularize Bindings
 map <Leader>a :Tabularize /
 
-
-" Movement
-let g:BASH_Ctrl_j = 'off'
-noremap <C-j> }
-noremap <C-k> {
-
-
 " --------------------------
 " Leader t
 nnoremap <leader>ts :ALEToggle<CR>
@@ -67,3 +60,8 @@ function! <SID>SynStack()
   endif
   echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
 endfunc
+
+" Movement
+let g:BASH_Ctrl_j = 'off'
+nnoremap <C-n> }
+nmap <C-p> {

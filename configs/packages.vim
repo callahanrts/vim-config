@@ -1,5 +1,3 @@
-
-
 Plug 'Raimondi/delimitMate'                   " Bracket completion
 Plug 'airblade/vim-gitgutter'                 " See git status in the gutter
 Plug 'scrooloose/nerdtree'                    " Nice directory view
@@ -23,6 +21,13 @@ Plug 'jceb/vim-orgmode'                       " Org Mode
   Plug 'vim-scripts/utl.vim'
 Plug 'janko-m/vim-test'
 Plug 'benmills/vimux'
+Plug 'tpope/vim-vinegar'
+Plug 'tpope/vim-eunuch'                       " Run unix-y commands from vim
+" Select html attributes with vix
+Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr'
+Plug 'mattn/emmet-vim'                        " HTML Completer
+Plug 'SirVer/ultisnips'                       " Custom Snippets
+Plug 'christoomey/vim-tmux-navigator'         " Seamless split nav
 
 
 " For looks
