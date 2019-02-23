@@ -2,6 +2,7 @@ let b:ale_linters_ignore = ['tsserver']
 let g:ale_linters = {'javascript': ['eslint', 'flow']}
 let g:ale_fixers = {
 \   'javascript': ['prettier'],
+\   'typescript': ['prettier'],
 \   'css': ['prettier'],
 \   'scss': ['prettier']
 \}
