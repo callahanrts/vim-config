@@ -26,8 +26,8 @@ Plug 'tpope/vim-eunuch'                       " Run unix-y commands from vim
 " Select html attributes with vix
 Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr'
 Plug 'mattn/emmet-vim'                        " HTML Completer
-Plug 'SirVer/ultisnips'                       " Custom Snippets
 Plug 'christoomey/vim-tmux-navigator'         " Seamless split nav
+Plug 'SirVer/ultisnips'                       " Snippets
 
 
 " For looks
