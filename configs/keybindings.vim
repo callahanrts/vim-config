@@ -24,7 +24,8 @@ nmap <c-t>x :tabclose<CR>
 " File / Code searching
 nmap <c-x>b :Buffers<CR>
 nmap <c-x>f :FZF<CR>
-nmap <c-x>a :Ag<space>
+" nmap <c-x>a :Ag<space>
+nmap <c-x>a :Rg<space>
 nmap <c-x><c-f> :cd ~/
 
 " Clear / search
@@ -63,5 +64,5 @@ endfunc
 
 " Movement
 let g:BASH_Ctrl_j = 'off'
-nnoremap <C-n> }
-nmap <C-p> {
+noremap <C-n> }
+map <C-p> {
