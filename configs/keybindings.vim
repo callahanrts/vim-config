@@ -51,6 +51,19 @@ nnoremap <leader>ts :ALEToggle<CR>
 
 " Toggle background color (light and dark theme)
 map <Leader>tt :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+
+" Toggle Auto Format (on save)
+function! ToggleAutoFormat()
+  if g:ale_fix_on_save
+    let g:ale_fix_on_save=0
+    echo "Disable Formatter"
+  else
+    let g:ale_fix_on_save=1
+    echo "Enable Formatter"
+  endif
+endfunction
+map <Leader>tl :call ToggleAutoFormat()<CR>
+
 " --------------------------
 
 " Show syntax highlighting groups for word under cursor
