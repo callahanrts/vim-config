@@ -15,7 +15,7 @@ Plug 'junegunn/fzf.vim'                       " Fuzzy search
 Plug 'tpope/vim-commentary'                   " Comment stuff
 Plug 'tpope/vim-eunuch'                       " Vim support for some unix shell commands
 Plug 'vim-scripts/largefile'                  " Optimize opening giant files
-Plug 'w0rp/ale'                               " Asynchronous Lint Engine
+" Plug 'w0rp/ale'                               " Asynchronous Lint Engine
 " Plug 'ahw/vim-hooks'                          " Easy Vim Hooks
 Plug 'jceb/vim-orgmode'                       " Org Mode
   Plug 'vim-scripts/utl.vim'
@@ -28,6 +28,8 @@ Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr'
 Plug 'christoomey/vim-tmux-navigator'         " Seamless split nav
 Plug 'SirVer/ultisnips'                       " Snippets
 
+" Completion
+Plug 'neoclide/coc.nvim', {'do': { -> coc#util#install()}}
 
 " For looks
 Plug 'rakr/vim-one'                           " One Dark theme
