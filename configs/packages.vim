@@ -49,7 +49,7 @@ Plug 'elixir-editors/vim-elixir'
 Plug 'ElmCast/elm-vim'
 Plug 'posva/vim-vue'
 Plug 'digitaltoad/vim-pug'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'plasticboy/vim-markdown'
 Plug 'mxw/vim-jsx'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
