@@ -65,3 +65,13 @@ autocmd BufRead,BufNewFile *.es6 *.es setfiletype javascript
 silent !mkdir ~/.nvim/backup > /dev/null 2>&1
 set backupdir=~/.nvim/backup
 
+
+if has('gui_macvim')
+  set directory=$HOME/.vim/swapfiles//
+
+  set clipboard=unnamed             " Share clipboard with macOS
+
+  " Show a little bar for tab completion of commands
+  set wildmenu
+  set wildmode=full
+endif

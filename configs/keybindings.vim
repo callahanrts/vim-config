@@ -4,7 +4,8 @@ inoremap <C-c> <Esc><Esc>
 
 " Open...
 " nerd tree
-nmap <Leader>op :NERDTreeToggle<CR>
+" nmap <Leader>op :NERDTreeToggle<CR>
+nmap <Leader>op :NERDTreeCWD<CR>
 
 " Terminal mode bindings
 tnoremap <esc> <C-\><C-n>

@@ -71,3 +71,11 @@ if exists('+colorcolumn')
   " Use columns to highlight text area
   execute "set colorcolumn=".join(range(1,80), ',').join(range(80,100), ',')
 endif
+
+
+" MacVim Settings
+if has('gui_macvim')
+  set guioptions=
+
+  set guifont=Mezlo\ for\ Powerline:h12
+endif
