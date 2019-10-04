@@ -16,7 +16,6 @@ Plug 'benmills/vimux'
 Plug 'tpope/vim-eunuch'                       " Run unix-y commands from vim
 Plug 'christoomey/vim-tmux-navigator'         " Seamless split nav
 Plug 'SirVer/ultisnips'                       " Snippets
-Plug 'tpope/vim-obsession'                    " Sessions
 
 Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr' " Select html attributes with vix
 

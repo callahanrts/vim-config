@@ -29,7 +29,7 @@ if !has('gui_running')
   set encoding=utf8                 " This can't be set after start up
 endif
 
-" Turn Off Noisy Shit
+" Turn off noisy shit
 set visualbell
 set t_vb="
 set re=1
@@ -57,8 +57,6 @@ au BufRead,BufNewFile *.coffee    set filetype=coffee " associate *.js.coffee wi
 au BufNewFile,BufReadPost *.jade  set filetype=jade
 au BufNewFile,BufReadPost *.styl  set filetype=stylus
 au BufRead,BufNewFile *.raml set ft=yaml
-au BufRead,BufNewFile *.go set filetype=go
-autocmd FileType go setlocal tabstop=2 shiftwidth=2 softtabstop=2
 autocmd BufRead,BufNewFile *.es6 *.es setfiletype javascript
 
 " Change backup directory so git doesn't get cluttered
