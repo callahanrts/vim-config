@@ -1,5 +1,10 @@
 {
   "tsserver.npm": "/usr/bin/npm",
   "languageserver": {
-  }
+  },
+
+  "solargraph.autoformat": true,
+  "solargraph.formatting": true,
+  "solargraph.hover": true,
+  "solargraph.diagnostics": true,
 }

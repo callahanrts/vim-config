@@ -15,6 +15,10 @@ set undofile                        " Maintain undo history between sessions
 set undodir=~/.nvim/undodir         " Set directory for undo files
 let mapleader=" "                   " Change leader key to space
 
+" Turn off line numbers in terminal mod"
+au TermOpen * setlocal nonumber norelativenumber
+au TermOpen * :set winhighlight=Normal:ColorColumn
+
 if has('unix')
   set clipboard=unnamedplus         " Share clipboard with macOS
 else
