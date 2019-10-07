@@ -5,6 +5,7 @@ Plug 'tpope/vim-surround'                     " Surrounding text with stuff
 Plug 'gorkunov/smartpairs.vim'                " Select pairs of things (eg. vi', vi<)
 Plug 'tpope/vim-fugitive'                     " Github shit
   Plug 'tpope/vim-rhubarb'                    " Fugitive is the Git, rhubarb is the hub
+Plug 'jreybert/vimagit'                       " Magit for staging/commiting
 Plug 'godlygeek/tabular'                      " Align text
 Plug 'vim-scripts/repeat.vim'                 " Repeat plugin commands (not just native) using .
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
