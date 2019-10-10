@@ -16,7 +16,9 @@ Plug 'janko-m/vim-test'
 Plug 'benmills/vimux'
 Plug 'tpope/vim-eunuch'                       " Run unix-y commands from vim
 Plug 'christoomey/vim-tmux-navigator'         " Seamless split nav
+Plug 'knubie/vim-kitty-navigator'             " Seamless kitty splits
 Plug 'SirVer/ultisnips'                       " Snippets
+Plug 'jceb/vim-orgmode'                       " Org mode
 
 Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr' " Select html attributes with vix
 
