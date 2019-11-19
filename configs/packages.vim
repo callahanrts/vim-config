@@ -42,3 +42,6 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'plasticboy/vim-markdown'
 Plug 'mxw/vim-jsx'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'leafgarland/typescript-vim'
+Plug 'peitalin/vim-jsx-typescript'
+Plug 'ElmCast/elm-vim'
