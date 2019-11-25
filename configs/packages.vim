@@ -36,12 +36,17 @@ Plug 'cakebaker/scss-syntax.vim',  { 'for': 'scss' }
 Plug 'JulesWang/css.vim',          { 'for': 'css' }
 Plug 'kchmck/vim-coffee-script',   { 'for': 'coffee' }
 Plug 'tpope/vim-haml',             { 'for': 'haml' }
-Plug 'pangloss/vim-javascript'
 Plug 'posva/vim-vue'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'plasticboy/vim-markdown'
-Plug 'mxw/vim-jsx'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'leafgarland/typescript-vim'
-Plug 'peitalin/vim-jsx-typescript'
+" Plug 'leafgarland/typescript-vim'
 Plug 'ElmCast/elm-vim'
+
+" Javascript
+Plug 'maxmellon/vim-jsx-pretty'
+Plug 'yuezk/vim-js'
+" Plug 'pangloss/vim-javascript'
+" Plug 'peitalin/vim-jsx-typescript'
+
+Plug 'wakatime/vim-wakatime'
