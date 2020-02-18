@@ -39,14 +39,9 @@ Plug 'tpope/vim-haml',             { 'for': 'haml' }
 Plug 'posva/vim-vue'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'plasticboy/vim-markdown'
-Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-" Plug 'leafgarland/typescript-vim'
 Plug 'ElmCast/elm-vim'
 
 " Javascript
-Plug 'maxmellon/vim-jsx-pretty'
 Plug 'yuezk/vim-js'
-" Plug 'pangloss/vim-javascript'
-" Plug 'peitalin/vim-jsx-typescript'
 
 Plug 'wakatime/vim-wakatime'
