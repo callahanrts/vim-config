@@ -1,33 +1,37 @@
-Plug 'Raimondi/delimitMate'                   " Bracket completion
-Plug 'airblade/vim-gitgutter'                 " See git status in the gutter
-Plug 'scrooloose/nerdtree'                    " Nice directory view
-Plug 'tpope/vim-surround'                     " Surrounding text with stuff
-Plug 'gorkunov/smartpairs.vim'                " Select pairs of things (eg. vi', vi<)
-Plug 'tpope/vim-fugitive'                     " Github shit
-  Plug 'tpope/vim-rhubarb'                    " Fugitive is the Git, rhubarb is the hub
-Plug 'jreybert/vimagit'                       " Magit for staging/commiting
-Plug 'godlygeek/tabular'                      " Align text
-Plug 'vim-scripts/repeat.vim'                 " Repeat plugin commands (not just native) using .
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'                       " Fuzzy search
-Plug 'tpope/vim-commentary'                   " Comment stuff
-Plug 'vim-scripts/largefile'                  " Optimize opening giant files
-Plug 'janko-m/vim-test'
-Plug 'benmills/vimux'
-Plug 'tpope/vim-eunuch'                       " Run unix-y commands from vim
-Plug 'christoomey/vim-tmux-navigator'         " Seamless split nav
-Plug 'knubie/vim-kitty-navigator'             " Seamless kitty splits
-Plug 'SirVer/ultisnips'                       " Snippets
-Plug 'jceb/vim-orgmode'                       " Org mode
+Plug 'Raimondi/delimitMate'          " Bracket completion
+Plug 'airblade/vim-gitgutter'        " See git status in the gutter
+Plug 'scrooloose/nerdtree'           " Nice directory view
+Plug 'tpope/vim-surround'            " Surrounding text with stuff
+Plug 'gorkunov/smartpairs.vim'       " Select pairs of things (eg. vi', vi<)
+Plug 'tpope/vim-fugitive'            " Github shit
+  Plug 'tpope/vim-rhubarb'           " Fugitive is the Git, rhubarb is the hub
+Plug 'godlygeek/tabular'             " Align text
+Plug 'vim-scripts/repeat.vim'        " Repeat plugin commands (not just native) using .
+Plug 'tpope/vim-commentary'          " Comment stuff
+Plug 'vim-scripts/largefile'         " Optimize opening giant files
+Plug 'janko-m/vim-test'              " Run tests
+Plug 'tpope/vim-eunuch'              " Run unix-y commands from vim
+Plug 'knubie/vim-kitty-navigator'    " Seamless kitty splits
+Plug 'SirVer/ultisnips'              " Snippets
+Plug 'junegunn/fzf.vim'              " Fuzzy search
+Plug 'junegunn/fzf', {
+  \ 'dir': '~/.fzf',
+  \ 'do': './install --all'
+  \ }
 
-Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr' " Select html attributes with vix
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install',
+  \ 'branch': 'release/0.x'
+  \ }
+
+" Select html attributes with vix
+Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr'
 
 " Completion
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
 
 " For looks
-Plug 'rakr/vim-one'                           " One Dark theme
-
+Plug 'rakr/vim-one' " One Dark theme
 Plug 'vim-airline/vim-airline'
 
 " Language Support
@@ -43,5 +47,4 @@ Plug 'ElmCast/elm-vim'
 
 " Javascript
 Plug 'yuezk/vim-js'
-
-Plug 'wakatime/vim-wakatime'
+Plug 'leafgarland/typescript-vim'
