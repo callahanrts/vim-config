@@ -9,7 +9,6 @@ let g:coc_global_extensions = [
       \'coc-explorer',
       \'coc-fzf-preview',
       \'coc-snippets',
-      \'coc-spell-checker',
       \'coc-json',
       \'coc-go',
       \'coc-html',
