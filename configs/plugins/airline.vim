@@ -15,4 +15,4 @@ let g:airline_theme='one'
 
 " Attempting to increase performance
 let g:airline_highlighting_cache = 1
-let g:airline_extensions = ['branch', 'tabline', 'ale']
+let g:airline_extensions = ['branch', 'tabline'] ", 'ale']

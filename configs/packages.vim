@@ -13,11 +13,11 @@ Plug 'janko-m/vim-test'              " Run tests
 Plug 'tpope/vim-eunuch'              " Run unix-y commands from vim
 Plug 'knubie/vim-kitty-navigator'    " Seamless kitty splits
 Plug 'SirVer/ultisnips'              " Snippets
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'              " Fuzzy search
-Plug 'junegunn/fzf', {
-  \ 'dir': '~/.fzf',
-  \ 'do': './install --all'
-  \ }
+
+" Completion engine
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Plug 'prettier/vim-prettier', {
   \ 'do': 'yarn install',
