@@ -29,9 +29,9 @@ autocmd VimResized * wincmd =       " Automatically resize splits to equal sizes
 
 autocmd FileType markdown set spell
 
-if !has('gui_running')
+"if !has('gui_running')
   set encoding=utf8                 " This can't be set after start up
-endif
+"endif
 
 " Turn off noisy shit
 set visualbell

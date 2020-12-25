@@ -4,7 +4,6 @@
 " https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions
 "
 let g:coc_global_extensions = [
-      \'coc-git',
       \'coc-eslint',
       \'coc-explorer',
       \'coc-fzf-preview',

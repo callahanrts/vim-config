@@ -1,4 +1,4 @@
-Plug 'Raimondi/delimitMate'          " Bracket completion
+Plug 'jiangmiao/auto-pairs'          " Bracket completion
 Plug 'airblade/vim-gitgutter'        " See git status in the gutter
 Plug 'scrooloose/nerdtree'           " Nice directory view
 Plug 'tpope/vim-surround'            " Surrounding text with stuff
@@ -33,6 +33,8 @@ Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr'
 " For looks
 Plug 'rakr/vim-one' " One Dark theme
 Plug 'vim-airline/vim-airline'
+Plug 'ryanoasis/vim-devicons' " File icons
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 
 " Language Support
 Plug 'vim-ruby/vim-ruby',          { 'for': 'rb' }
