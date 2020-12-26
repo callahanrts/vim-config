@@ -2,7 +2,7 @@
 " Graphical Vim Settings
 " --------------------------------------------------
 
-set fillchars+=vert:⎜
+set fillchars+=vert:⮠
 set cursorline
 set background=dark
 let g:one_allow_italics = 1
@@ -77,6 +77,5 @@ endif
 " MacVim Settings
 if has('gui_macvim')
   set guioptions=
-
-  set guifont=Mezlo\ for\ Powerline:h12
+  set guifont=Mezlo\ M:h12
 endif

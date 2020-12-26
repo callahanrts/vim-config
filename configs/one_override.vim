@@ -23,6 +23,7 @@ else
   call one#highlight("NormalDark", "", "ececec", "")
 endif
 
+hi SignColumn guibg=NONE
 
 " Hide Tildes
 hi! EndOfBuffer ctermbg=bg ctermfg=bg guibg=bg guifg=bg
