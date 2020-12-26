@@ -15,8 +15,8 @@ let g:NERDTreeMinimalUI=1
 let g:NERDTreeWinSize=36
 
 " Use some nicer looking arrows
-let g:NERDTreeDirArrowExpandable = '➙'
-let g:NERDTreeDirArrowCollapsible = '➔'
+let g:NERDTreeDirArrowExpandable = ''
+let g:NERDTreeDirArrowCollapsible = ''
 
 " Let <Leader><Leader> (^#) return from NERDTree window.
 let g:NERDTreeCreatePrefix='silent keepalt keepjumps'
