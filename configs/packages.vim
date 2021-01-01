@@ -15,14 +15,13 @@ Plug 'knubie/vim-kitty-navigator'    " Seamless kitty splits
 Plug 'SirVer/ultisnips'              " Snippets
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'              " Fuzzy search
+Plug 'preservim/tagbar'              " Tagbar
 
 " Completion engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'branch': 'release/0.x'
-  \ }
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 
 " Select html attributes with vix
 Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr'
