@@ -32,8 +32,28 @@ Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr'
 " For looks
 Plug 'rakr/vim-one' " One Dark theme
 Plug 'vim-airline/vim-airline'
-Plug 'ryanoasis/vim-devicons' " File icons
+" Plug 'ryanoasis/vim-devicons' " File icons
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+
+" LSP
+" pulled from https://github.com/ecosse3/nvim/blob/lua/vim-plug/plugins.vim
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/nvim-compe'
+" Plug 'prabirshrestha/async.vim'
+" Plug 'prabirshrestha/vim-lsp'
+" Plug 'thomasfaingnaert/vim-lsp-snippets'
+" Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }
+Plug 'onsails/lspkind-nvim'
+" Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
+
+" Telescope
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
+
+" Colors
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}  " We recommend updating the parsers on update
 
 " Language Support
 Plug 'vim-ruby/vim-ruby',          { 'for': 'rb' }

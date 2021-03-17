@@ -21,3 +21,5 @@ let g:NERDTreeDirArrowCollapsible = ''
 " Let <Leader><Leader> (^#) return from NERDTree window.
 let g:NERDTreeCreatePrefix='silent keepalt keepjumps'
 
+" Maybe this can help with devicons performance issue?
+let NERDTreeHighlightCursorline = 0

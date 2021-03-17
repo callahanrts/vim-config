@@ -21,7 +21,8 @@ let g:coc_global_extensions = [
       \'coc-vetur',
       \'coc-yaml',
       \'coc-markdownlint',
-      \'coc-solargraph'
+      \'coc-solargraph',
+      \'coc-tailwindcss'
       \]
 
 " {{{ Config from Coc.nvim README
@@ -189,4 +190,3 @@ nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 
 " }}}
-
