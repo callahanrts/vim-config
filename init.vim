@@ -24,6 +24,10 @@ for f in split(glob('~/.config/nvim/configs/plugins/*.vim'), '\n')
   exe 'source' f
 endfor
 
+for f in split(glob('~/.config/nvim/configs/lua/*.vim'), '\n')
+  exe 'luafile ' f
+endfor
+
 " Include keybindings
 source ~/.config/nvim/configs/keybindings.vim
 
