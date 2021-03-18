@@ -69,4 +69,4 @@ require('telescope').setup{
 
 vim.api.nvim_set_keymap('n', '<c-x>b', ':Telescope buffers<cr>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<c-x>f', ':Telescope find_files<cr>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<c-x>a', ':Telescope live_grep<cr>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<c-x>a', ':Telescope live_grep<cr>', {})
