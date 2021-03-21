@@ -7,11 +7,11 @@
 local Color, c, Group, g, s = require("colorbuddy").setup()
 local b = s.bold
 local i = s.italic
-local n = s.inverse
+-- local n = s.inverse
 local uc = s.undercurl
 local ul = s.underline
 local r = s.reverse
-local sto = s.standout
+-- local sto = s.standout
 local no = s.NONE
 local v = vim
 
