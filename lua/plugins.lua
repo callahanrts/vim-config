@@ -1,10 +1,7 @@
-vim.cmd("set encoding=utf-8")
-
 vim.cmd("call plug#begin('~/.nvim/plugged')")
 
 vim.cmd("Plug 'jiangmiao/auto-pairs'")          -- Bracket completion
 vim.cmd("Plug 'airblade/vim-gitgutter'")        --  See git status in the gutter
--- vim.cmd("Plug 'scrooloose/nerdtree'")           --  Nice directory view
 vim.cmd("Plug 'kyazdani42/nvim-tree.lua'")
 vim.cmd("Plug 'tpope/vim-surround'")            --  Surrounding text with stuff
 vim.cmd("Plug 'gorkunov/smartpairs.vim'")       --  Select pairs of things (eg. vi', vi<)
@@ -35,16 +32,15 @@ vim.cmd("Plug 'vim-airline/vim-airline'")
 vim.cmd("Plug 'tjdevries/colorbuddy.vim'")
 vim.cmd("Plug 'Th3Whit3Wolf/onebuddy'")
 vim.cmd("Plug 'kyazdani42/nvim-web-devicons'") -- Recommended (for coloured icons)
+vim.cmd("Plug 'RRethy/vim-illuminate'") -- Highlight token under cursor
 
--- LSP pulled from https://github.com/ecosse3/nvim/blob/lua/vim-plug/plugins.vim
+-- LSP
 vim.cmd("Plug 'neovim/nvim-lspconfig'")
 vim.cmd("Plug 'hrsh7th/nvim-compe'")
--- Plug 'prabirshrestha/async.vim'
--- Plug 'prabirshrestha/vim-lsp'
--- Plug 'thomasfaingnaert/vim-lsp-snippets'
--- Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 vim.cmd("Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }")
 vim.cmd("Plug 'onsails/lspkind-nvim'")
+-- Plug 'thomasfaingnaert/vim-lsp-snippets'
+-- Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 -- Plug 'tzachar/compe-tabnine', { 'do': './install.sh' }
 
 -- Telescope

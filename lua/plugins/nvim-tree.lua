@@ -32,7 +32,7 @@ vim.g.nvim_tree_bindings = {
   ["o"]              = tree_cb("edit"),
   -- ["<2-LeftMouse>"]  = tree_cb("edit"),
   -- ["<2-RightMouse>"] = tree_cb("cd"),
-  ["<C-]>"]          = tree_cb("cd"),
+  ["C"]              = tree_cb("cd"),
   ["s"]              = tree_cb("vsplit"),
   ["i"]              = tree_cb("split"),
   ["<C-t>"]          = tree_cb("tabnew"),
@@ -51,7 +51,7 @@ vim.g.nvim_tree_bindings = {
   ["p"]              = tree_cb("paste"),
   ["[c"]             = tree_cb("prev_git_item"),
   ["]c"]             = tree_cb("next_git_item"),
-  ["-"]              = tree_cb("dir_up"),
+  ["u"]              = tree_cb("dir_up"),
   ["q"]              = tree_cb("close"),
 }
 
