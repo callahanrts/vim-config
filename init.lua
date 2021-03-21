@@ -6,7 +6,7 @@
 
 -- core
 require('application')
-require('plugins')
+require('packages')
 require('keybindings')
 
 -- plugins
@@ -16,16 +16,14 @@ require('plugins.telescope')
 require('plugins.kitty')
 require('plugins.markdown')
 require('plugins.elm')
--- require('plugins.nerdtree')
 require('plugins.nvim-tree')
 require('plugins.prettier')
 require('plugins.tagbar')
 require('plugins.vim-go')
 require('plugins.vim-test')
 require('plugins.vim-illuminate')
--- require('plugins.coc')
--- require('plugins.fzf')
--- require('plugins.ultisnips')
+require('plugins.codi')
+require('plugins.which-key')
 
 -- LSP
 require('lsp')
@@ -38,4 +36,3 @@ require('lsp.servers')
 require('ui')
 require('theme')
 require('theme.icons')
--- require('plugins.bufferline')
