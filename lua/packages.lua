@@ -1,4 +1,4 @@
-vim.cmd("call plug#begin('~/.nvim/plugged')")
+vim.cmd("call plug#begin('~/.config/nvim/plugged')")
 
 vim.cmd("Plug 'jiangmiao/auto-pairs'")          -- Bracket completion
 vim.cmd("Plug 'airblade/vim-gitgutter'")        -- See git status in the gutter
@@ -37,7 +37,7 @@ vim.cmd("Plug 'prettier/vim-prettier', { 'do': 'yarn install' }")
 vim.cmd("Plug 'kana/vim-textobj-user' | Plug 'whatyouhide/vim-textobj-xmlattr'")
 
 -- For looks
-vim.cmd("Plug 'rakr/vim-one'") -- One Dark theme
+vim.cmd("Plug 'rakr/vim-one'") -- One Dark theme (for airline only at this point)
 vim.cmd("Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}")
 vim.cmd("Plug 'vim-airline/vim-airline'")
 vim.cmd("Plug 'tjdevries/colorbuddy.vim'")

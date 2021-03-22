@@ -9,7 +9,7 @@ vim.cmd("set scrolloff=3")                     -- Keep 3 lines below and above t
 vim.cmd("set noshowmode")                      -- Don't show default insert (handled by lightline)
 vim.cmd("set foldmethod=marker")               -- Use markers for folding
 vim.cmd("set undofile")                        -- Maintain undo history between sessions
-vim.cmd("set undodir=~/.nvim/undodir")         -- Set directory for undo files
+vim.cmd("set undodir=~/.config/nvim/undodir")         -- Set directory for undo files
 vim.cmd("let mapleader=' '")                   -- Change leader key to space
 
 -- Turn off noisy shit
@@ -45,8 +45,8 @@ else
 end
 
 -- Change backup directory so git doesn't get cluttered
-vim.cmd("silent !mkdir ~/.nvim/backup > /dev/null 2>&1")
-vim.cmd("set backupdir=~/.nvim/backup")
+vim.cmd("silent !mkdir ~/.config/nvim/backup > /dev/null 2>&1")
+vim.cmd("set backupdir=~/.config/nvim/backup")
 
 if vim.fn.has('gui_macvim') then
   vim.cmd("set directory=$HOME/.vim/swapfiles//")
