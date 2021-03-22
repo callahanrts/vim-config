@@ -46,7 +46,8 @@ vim.cmd("Plug 'RRethy/vim-illuminate'") -- Highlight token under cursor
 
 -- LSP
 vim.cmd("Plug 'neovim/nvim-lspconfig'")
-vim.cmd("Plug 'hrsh7th/nvim-compe'")
+vim.cmd("Plug 'hrsh7th/nvim-compe'") -- Completion
+vim.cmd("Plug 'ray-x/lsp_signature.nvim'") -- Signatures in completion
 vim.cmd("Plug 'glepnir/lspsaga.nvim', { 'branch': 'main' }")
 vim.cmd("Plug 'onsails/lspkind-nvim'")
 -- Plug 'thomasfaingnaert/vim-lsp-snippets'

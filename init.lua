@@ -28,10 +28,6 @@ require('plugins.indent-line')
 
 -- LSP
 require('lsp')
-require('lsp.compe')
-require('lsp.lspkind')
-require('lsp.lspsaga')
-require('lsp.servers')
 
 -- ui
 require('ui')

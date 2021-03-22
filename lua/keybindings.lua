@@ -3,7 +3,7 @@
 vim.api.nvim_set_keymap('i', '<C-c>', '<Esc><Esc>', { noremap = true })
 
 -- Open...
-vim.api.nvim_set_keymap('n', '<leader>op', ':NvimTreeOpen<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>op', ':NvimTreeFindFile<cr>', {})
 -- Terminal
 -- nnoremap <Leader>ot :split<CR><C-w>j :term<CR>
 vim.api.nvim_set_keymap('n', '<leader>ot', ':split<CR><C-w>j :term<CR>', { noremap = true })

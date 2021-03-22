@@ -1,11 +1,27 @@
--- require('lsp/servers')
--- require('lsp/lspkind')
--- require('lsp/lspsaga')
+require('lsp.compe')
+require('lsp.signature')
+require('lsp.lspkind')
+require('lsp.lspsaga')
+require('lsp.servers')
+
+local g = vim.g
+
+-- Diagnostic display
+vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics, {
+    underline = true,
+    virtual_text = false,
+    signs = true,
+    update_in_insert = true
+  }
+)
+-- Keybinding for displaying diagnostics
+vim.api.nvim_set_keymap('n', '<c-i>', ':Lspsaga show_line_diagnostics<cr>', {})
 
 --TODO figure out why this don't work
 vim.fn.sign_define("LspDiagnosticsSignError", {texthl = "LspDiagnosticsSignError", text = "", numhl = "LspDiagnosticsSignError"})
 vim.fn.sign_define("LspDiagnosticsSignWarning", {texthl = "LspDiagnosticsSignWarning", text = "", numhl = "LspDiagnosticsSignWarning"})
-vim.fn.sign_define("LspDiagnosticsSignInformation", {texthl = "LspDiagnosticsSignInformation", text = "", numhl = "LspDiagnosticsSignInformation"})
+vim.fn.sign_define("LspDiagnosticsSignInformation", {texthl = "LspDiagnosticsSignInformation", text = "", numhl = "LspDiagnosticsSignInformation"})
 vim.fn.sign_define("LspDiagnosticsSignHint", {texthl = "LspDiagnosticsSignHint", text = "", numhl = "LspDiagnosticsSignHint"})
 
 vim.cmd('nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>')
@@ -26,8 +42,8 @@ vim.cmd('nnoremap <silent> <C-b> <cmd>lua require(\'lspsaga.action\').smart_scro
 
 
 -- -- Show lsp finder
--- -- nnoremap <silent> gh :Lspsaga lsp_finder<CR>
--- vim.api.nvim_set_keymap('n', 'gh', ':Lspsaga lsp_finder<cr>', { noremap = true, silent = true })
+-- nnoremap <silent> gh :Lspsaga lsp_finder<CR>
+vim.api.nvim_set_keymap('n', 'gh', ':Lspsaga lsp_finder<cr>', { noremap = true, silent = true })
 --
 -- -- Code actions
 -- -- nnoremap <silent><leader>ca :Lspsaga code_action<CR>
