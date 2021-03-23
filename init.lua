@@ -25,6 +25,7 @@ require('plugins.vim-illuminate')
 require('plugins.codi')
 require('plugins.which-key')
 require('plugins.indent-line')
+-- require('plugins.auto-pairs')
 
 -- LSP
 require('lsp')

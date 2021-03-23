@@ -9,16 +9,14 @@ vim.cmd("set scrolloff=3")                     -- Keep 3 lines below and above t
 vim.cmd("set noshowmode")                      -- Don't show default insert (handled by lightline)
 vim.cmd("set foldmethod=marker")               -- Use markers for folding
 vim.cmd("set undofile")                        -- Maintain undo history between sessions
-vim.cmd("set undodir=~/.config/nvim/undodir")         -- Set directory for undo files
+vim.cmd("set undodir=~/.config/nvim/undodir")  -- Set directory for undo files
 vim.cmd("let mapleader=' '")                   -- Change leader key to space
+vim.cmd("set nowrap")                          -- Enable "visual" wrapping (nowrap turns off text wrapping)
 
 -- Turn off noisy shit
 vim.cmd('set visualbell')
 vim.cmd('set t_vb="')
 vim.cmd('set re=1')
-
--- Word Wrap Configs
-vim.cmd("set nowrap")                          -- Enable "visual" wrapping (nowrap turns off text wrapping)
 
 -- Whitespace Settings
 vim.cmd("set tabstop=2")                       -- Number of visual spaces per tab
@@ -34,10 +32,6 @@ vim.cmd("set incsearch")                       -- Show results as you're typing
 vim.cmd("set ignorecase")
 vim.cmd("set smartcase")
 
--- Turn off line numbers in terminal mode
-vim.cmd("au TermOpen * setlocal nonumber norelativenumber")
-vim.cmd("au TermOpen * :set winhighlight=Normal:ColorColumn")
-
 if vim.fn.has('unix') then
   vim.cmd("set clipboard=unnamedplus")         -- Share clipboard with macOS
 else
@@ -48,21 +42,14 @@ end
 vim.cmd("silent !mkdir ~/.config/nvim/backup > /dev/null 2>&1")
 vim.cmd("set backupdir=~/.config/nvim/backup")
 
-if vim.fn.has('gui_macvim') then
-  vim.cmd("set directory=$HOME/.vim/swapfiles//")
-
-  vim.cmd("set clipboard=unnamed")             -- Share clipboard with macOS
-
-  -- Show a little bar for tab completion of commands
-  vim.cmd("set wildmenu")
-  vim.cmd("set wildmode=full")
-end
-
 -- Auocommands
-vim.cmd("autocmd VimResized * wincmd =")       -- Automatically resize splits to equal sizes when vim is resized
-vim.cmd("autocmd FileType markdown set spell")
-vim.cmd("autocmd BufWritePre * :%s/\\s\\+$//e")-- Remove trailing whitespace on save
+-- Turn off line numbers in terminal mode
+vim.cmd("au TermOpen * setlocal nonumber norelativenumber")
+vim.cmd("au TermOpen * :set winhighlight=Normal:ColorColumn")
 
--- Set filetype for odd file extensions
--- au BufRead,BufNewFile *.raml set ft=yaml
--- autocmd BufRead,BufNewFile *.es6 *.es setfiletype javascript
+-- Automatically resize splits to equal sizes when vim is resized
+vim.cmd("autocmd VimResized * wincmd =")
+
+-- Remove trailing whitespace on save
+vim.cmd("autocmd BufWritePre * :%s/\\s\\+$//e")
+vim.cmd("autocmd FileType markdown set spell")

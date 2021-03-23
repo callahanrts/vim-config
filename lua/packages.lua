@@ -1,5 +1,6 @@
 vim.cmd("call plug#begin('~/.config/nvim/plugged')")
 
+-- vim.cmd("Plug 'Raimondi/delimitMate'")          -- Bracket completion
 vim.cmd("Plug 'jiangmiao/auto-pairs'")          -- Bracket completion
 vim.cmd("Plug 'airblade/vim-gitgutter'")        -- See git status in the gutter
 vim.cmd("Plug 'kyazdani42/nvim-tree.lua'")      -- File browser
@@ -21,7 +22,6 @@ vim.cmd("Plug 'preservim/tagbar'")              -- Tagbar
 vim.cmd("Plug 'andymass/vim-matchup'")          -- Improve %
 vim.cmd("Plug 'metakirby5/codi.vim'")           -- Scratchpad
 vim.cmd("Plug 'Yggdroot/indentLine'")           -- Show indents
--- vim.cmd("Plug 'norcalli/nvim-colorizer.lua'")   -- Show CSS colors
 
 -- Show organization of leader keybindings
 vim.cmd("Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }")

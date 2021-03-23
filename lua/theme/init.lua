@@ -15,6 +15,16 @@ local r = s.reverse
 local no = s.NONE
 local v = vim
 
+-- Function for finding highlight groups. Doesn't always work
+vim.cmd([[
+function! SynStack()
+  if !exists("*synstack")
+    return
+  endif
+  echo map(synstack(line('.'), col('.')), 'synIDattr(v:val, "name")')
+endfunc
+]])
+
 v.g.colors_name = 'onebuddy'
 if v.o.background == 'dark' then
     Color.new('mono_1', "#abb2bf")
@@ -586,6 +596,10 @@ Group.new('NERDTreeFile', c.mono_1, c.none, no)
 -- Coc.nvim Floating Background fix
 Group.new('CocFloating', c.mono_1, c.none, no)
 Group.new('NormalFloat', c.mono_1, c.none, no)
+
+-- nvim-tree indent marker color
+Group.new('NvimTreeIndentMarker', c.vertsplit, c.none, no)
+
 -----------------------------
 --     LSP Highlighting    --
 -----------------------------
