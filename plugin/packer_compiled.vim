@@ -32,10 +32,6 @@ local function try_loadstring(s, component, name)
 end
 
 _G.packer_plugins = {
-  ["auto-pairs"] = {
-    loaded = true,
-    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/auto-pairs"
-  },
   ["codi.vim"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/codi.vim"
@@ -64,6 +60,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
   },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
+  },
   ["nvim-compe"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/nvim-compe"
@@ -83,6 +83,10 @@ _G.packer_plugins = {
   ["nvim-web-devicons"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/nvim-web-devicons"
+  },
+  onebuddy = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/onebuddy"
   },
   ["packer.nvim"] = {
     loaded = true,
@@ -178,7 +182,6 @@ _G.packer_plugins = {
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
-vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-prettier'}, { ft = "javascript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType typescript ++once lua require("packer.load")({'vim-prettier'}, { ft = "typescript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType css ++once lua require("packer.load")({'vim-prettier'}, { ft = "css" }, _G.packer_plugins)]]
 vim.cmd [[au FileType less ++once lua require("packer.load")({'vim-prettier'}, { ft = "less" }, _G.packer_plugins)]]
@@ -189,6 +192,7 @@ vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-prettier'
 vim.cmd [[au FileType vue ++once lua require("packer.load")({'vim-prettier'}, { ft = "vue" }, _G.packer_plugins)]]
 vim.cmd [[au FileType yaml ++once lua require("packer.load")({'vim-prettier'}, { ft = "yaml" }, _G.packer_plugins)]]
 vim.cmd [[au FileType html ++once lua require("packer.load")({'vim-prettier'}, { ft = "html" }, _G.packer_plugins)]]
+vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-prettier'}, { ft = "javascript" }, _G.packer_plugins)]]
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
 vim.cmd [[source /Users/cody/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/css.vim]]

@@ -14,6 +14,9 @@ Group.new('ColorColumn',  c.none,         c.syntax_cursor,  no)
 -- nvim-tree indent marker color
 Group.new('NvimTreeIndentMarker', c.vertsplit, c.none, no)
 
+-- Change background color of nvimtree on open
+vim.cmd([[au FileType NvimTree set colorcolumn=]])
+
 -- vim-one color overrides
 -- vim.cmd([[
 --   if &background == "dark"

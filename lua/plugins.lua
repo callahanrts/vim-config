@@ -31,12 +31,8 @@ return require('packer').startup(function(use)
   use 'andymass/vim-matchup'       -- Improve %
   use 'metakirby5/codi.vim'        -- Scratchpad
 
-  -- vim.cmd("Plug 'vim-scripts/largefile'")         -- Optimize opening giant files
   -- vim.cmd("Plug 'janko-m/vim-test'")              -- Run tests
-  -- vim.cmd("Plug 'tpope/vim-eunuch'")              -- Run unix-y commands from vim
   -- vim.cmd("Plug 'SirVer/ultisnips'")              -- Snippets
-  -- vim.cmd("Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }")
-  -- vim.cmd("Plug 'junegunn/fzf.vim'")              -- Fuzzy search
 
   -- Telescope
   use 'nvim-lua/popup.nvim'
@@ -64,7 +60,7 @@ return require('packer').startup(function(use)
   -- Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 
   -- Show menu for leader commands
-  use { 'liuchengxu/vim-which-key' } --, event = { 'WhichKey', 'WhichKey!' } }
+  use { 'liuchengxu/vim-which-key' }
 
   use {
     'prettier/vim-prettier',
