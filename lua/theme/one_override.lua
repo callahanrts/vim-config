@@ -15,9 +15,9 @@ Group.new('ColorColumn',  c.none,         c.syntax_cursor,  no)
 Group.new('NvimTreeIndentMarker', c.vertsplit, c.none, no)
 
 
-Color.new('gitgreen', "#64dd17")
-Color.new('gitred', "#dd2c00")
-Color.new('gityellow', "#ffea00")
+Color.new('gitgreen', "#50a14f")
+Color.new('gitred', "#be5046")
+Color.new('gityellow', "#e5c07b")
 
 Group.new('GitSignsAdd', c.gitgreen, c.none, no)
 Group.new('GitSignsChange', c.gityellow, c.none, no)
