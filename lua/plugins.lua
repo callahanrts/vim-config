@@ -10,14 +10,13 @@ if fn.empty(fn.glob(install_path)) > 0 then
   execute 'packadd packer.nvim'
 end
 
-vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when there are changes in plugins.lua
-
 return require('packer').startup(function(use)
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
   use 'windwp/nvim-autopairs'      -- Bracket completion
-  use 'airblade/vim-gitgutter'     -- See git status in the gutter
+  -- use 'airblade/vim-gitgutter'     -- See git status in the gutter
+  use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use 'kyazdani42/nvim-tree.lua'   -- File browser
   use 'tpope/vim-surround'         -- Surrounding text with stuff
   use 'gorkunov/smartpairs.vim'    -- Select pairs of things (eg. vi', vi<)
@@ -35,20 +34,24 @@ return require('packer').startup(function(use)
   -- vim.cmd("Plug 'SirVer/ultisnips'")              -- Snippets
 
   -- Telescope
-  use 'nvim-lua/popup.nvim'
-  use 'nvim-lua/plenary.nvim'
-  use 'nvim-telescope/telescope.nvim'
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {
+      'nvim-lua/popup.nvim',
+      'nvim-lua/plenary.nvim'
+    }
+  }
 
   -- For looks
   use 'tjdevries/colorbuddy.vim'
   use 'Th3Whit3Wolf/onebuddy'
   use 'kyazdani42/nvim-web-devicons' -- Recommended (for coloured icons)
   use 'RRethy/vim-illuminate'        -- Highlight token under cursor
-  use 'Yggdroot/indentLine'          -- Show indents
-  use 'vim-airline/vim-airline'      -- vim airline
-  use 'rakr/vim-one'                 -- One Dark theme (for airline only at this point)
+  -- use 'Yggdroot/indentLine'          -- Show indents
+  use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use 'christianchiarulli/nvcode-color-schemes.vim'
+  use { 'glepnir/galaxyline.nvim', branch = 'main' }
+  use 'nvim-treesitter/nvim-treesitter-refactor'
 
   -- LSP
   use 'neovim/nvim-lspconfig'

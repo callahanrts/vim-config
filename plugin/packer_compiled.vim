@@ -40,6 +40,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
   },
+  ["galaxyline.nvim"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
+  },
   indentLine = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/indentLine"
@@ -55,10 +63,6 @@ _G.packer_plugins = {
   ["lspsaga.nvim"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
-  },
-  ["nvcode-color-schemes.vim"] = {
-    loaded = true,
-    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/nvcode-color-schemes.vim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -79,6 +83,10 @@ _G.packer_plugins = {
   ["nvim-treesitter"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/nvim-treesitter"
+  },
+  ["nvim-treesitter-refactor"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/nvim-treesitter-refactor"
   },
   ["nvim-web-devicons"] = {
     loaded = true,
@@ -120,10 +128,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/telescope.nvim"
   },
-  ["vim-airline"] = {
-    loaded = true,
-    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/vim-airline"
-  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/vim-commentary"
@@ -147,10 +151,6 @@ _G.packer_plugins = {
   ["vim-matchup"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/vim-matchup"
-  },
-  ["vim-one"] = {
-    loaded = true,
-    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/vim-one"
   },
   ["vim-prettier"] = {
     loaded = false,
@@ -182,6 +182,7 @@ _G.packer_plugins = {
 vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
+vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-prettier'}, { ft = "javascript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType typescript ++once lua require("packer.load")({'vim-prettier'}, { ft = "typescript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType css ++once lua require("packer.load")({'vim-prettier'}, { ft = "css" }, _G.packer_plugins)]]
 vim.cmd [[au FileType less ++once lua require("packer.load")({'vim-prettier'}, { ft = "less" }, _G.packer_plugins)]]
@@ -192,7 +193,6 @@ vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-prettier'
 vim.cmd [[au FileType vue ++once lua require("packer.load")({'vim-prettier'}, { ft = "vue" }, _G.packer_plugins)]]
 vim.cmd [[au FileType yaml ++once lua require("packer.load")({'vim-prettier'}, { ft = "yaml" }, _G.packer_plugins)]]
 vim.cmd [[au FileType html ++once lua require("packer.load")({'vim-prettier'}, { ft = "html" }, _G.packer_plugins)]]
-vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-prettier'}, { ft = "javascript" }, _G.packer_plugins)]]
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
 vim.cmd [[source /Users/cody/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/css.vim]]

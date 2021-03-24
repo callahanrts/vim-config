@@ -3,7 +3,7 @@ local no = s.NONE
 
 if vim.o.background == 'dark' then
   Color.new('syntax_bg', "#2c313a") -- defualt: 282c34
-  Color.new('syntax_cursor', "#282c34") -- default: 2c323c
+  Color.new('syntax_cursor', "#282c34") -- default: #2c323c | #282c34 | #252930
   Color.new('vertsplit', "#3b4048") -- default: 181a1f
 end
 
@@ -14,8 +14,17 @@ Group.new('ColorColumn',  c.none,         c.syntax_cursor,  no)
 -- nvim-tree indent marker color
 Group.new('NvimTreeIndentMarker', c.vertsplit, c.none, no)
 
+
+Color.new('gitgreen', "#64dd17")
+Color.new('gitred', "#dd2c00")
+Color.new('gityellow', "#ffea00")
+
+Group.new('GitSignsAdd', c.gitgreen, c.none, no)
+Group.new('GitSignsChange', c.gityellow, c.none, no)
+Group.new('GitSignsDelete', c.gitred, c.none, no)
+
 -- Change background color of nvimtree on open
-vim.cmd([[au FileType NvimTree set colorcolumn=]])
+-- vim.cmd("au FileType NvimTree hi SignColumn guibg=#282c34")
 
 -- vim-one color overrides
 -- vim.cmd([[
