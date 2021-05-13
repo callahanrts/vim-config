@@ -15,7 +15,6 @@ return require('packer').startup(function(use)
   use 'wbthomason/packer.nvim'
 
   use 'windwp/nvim-autopairs'      -- Bracket completion
-  -- use 'airblade/vim-gitgutter'     -- See git status in the gutter
   use { 'lewis6991/gitsigns.nvim', requires = { 'nvim-lua/plenary.nvim' } }
   use 'kyazdani42/nvim-tree.lua'   -- File browser
   use 'tpope/vim-surround'         -- Surrounding text with stuff
@@ -30,24 +29,15 @@ return require('packer').startup(function(use)
   use 'andymass/vim-matchup'       -- Improve %
   use 'metakirby5/codi.vim'        -- Scratchpad
 
-  -- vim.cmd("Plug 'janko-m/vim-test'")              -- Run tests
-  -- vim.cmd("Plug 'SirVer/ultisnips'")              -- Snippets
-
-  -- Telescope
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = {
-      'nvim-lua/popup.nvim',
-      'nvim-lua/plenary.nvim'
-    }
-  }
+  -- Uncomment this if you need to install fzf. It throws an error on the daily
+  use { 'junegunn/fzf', { run = ":call fzf#install()" } }
+  use 'junegunn/fzf.vim'
 
   -- For looks
   use 'tjdevries/colorbuddy.vim'
   use 'Th3Whit3Wolf/onebuddy'
   use 'kyazdani42/nvim-web-devicons' -- Recommended (for coloured icons)
   use 'RRethy/vim-illuminate'        -- Highlight token under cursor
-  -- use 'Yggdroot/indentLine'          -- Show indents
   use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use { 'glepnir/galaxyline.nvim', branch = 'main' }
@@ -63,7 +53,7 @@ return require('packer').startup(function(use)
   -- Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 
   -- Show menu for leader commands
-  use { 'liuchengxu/vim-which-key' }
+  use 'liuchengxu/vim-which-key'
 
   use {
     'prettier/vim-prettier',
@@ -81,4 +71,6 @@ return require('packer').startup(function(use)
     'kana/vim-textobj-user',
     requires = { 'whatyouhide/vim-textobj-xmlattr' }
   }
+
+  use 'rafcamlet/nvim-luapad'
 end)

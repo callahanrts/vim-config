@@ -18,53 +18,17 @@ if vim.fn.has("termguicolors") then
   vim.cmd("set termguicolors")
 end
 
-
--- Tmux cursor shapes for vim
-if vim.fn.exists('$ITERM_PROFILE') then
-  vim.cmd("set mouse=a")
-  if vim.fn.exists('$TMUX') then
-    vim.cmd('let &t_SI = "\\<Esc>[3 q"')
-    vim.cmd('let &t_EI = "\\<Esc>[0 q"')
-  else
-    vim.cmd('let &t_SI = "\\<Esc>]50;CursorShape=1\\x7"')
-    vim.cmd('let &t_EI = "\\<Esc>]50;CursorShape=0\\x7"')
-  end
-end
-
--- Terminal + Tmux pasting
--- function! WrapForTmux(s)
---   if !exists('$TMUX')
---     return a:s
---   endif
---
---   let tmux_start = "\<Esc>Ptmux;"
---   let tmux_end = "\<Esc>\\"
---
---   return tmux_start . substitute(a:s, "\<Esc>", "\<Esc>\<Esc>", 'g') . tmux_end
--- endfunction
---
--- let &t_SI .= WrapForTmux("\<Esc>[?2004h")
--- let &t_EI .= WrapForTmux("\<Esc>[?2004l")
---
--- function! XTermPasteBegin()
---   set pastetoggle=<Esc>[201~
---   set paste
---   return ""
--- endfunction
---
--- inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
-
 -- Set timeout to one second for normal commands and 0 for escape
-if not vim.fn.has('gui_running') then
-  vim.cmd("set ttimeoutlen=10")
-  vim.cmd([[
-    augroup FastEscape
-      autocmd!
-      au InsertEnter * set timeoutlen=0
-      au InsertLeave * set timeoutlen=500
-    augroup END
-  ]])
-end
+-- if not vim.fn.has('gui_running') then
+--   vim.cmd("set ttimeoutlen=10")
+--   vim.cmd([[
+--     augroup FastEscape
+--       autocmd!
+--       au InsertEnter * set timeoutlen=0
+--       au InsertLeave * set timeoutlen=500
+--     augroup END
+--   ]])
+-- end
 
 
 if vim.fn.exists('+colorcolumn') then

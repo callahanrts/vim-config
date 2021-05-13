@@ -12,7 +12,7 @@ require('keybindings')
 -- plugins
 require('plugins.autopairs')
 require('plugins.gitsigns')
-require('plugins.telescope')
+require('plugins.fzf')
 require('plugins.kitty')
 require('plugins.nvim-tree')
 require('plugins.tagbar')
@@ -30,3 +30,6 @@ require('plugins.vim-illuminate')
 require('plugins.indent-line')
 require('plugins.galaxyline')
 require('plugins.treesitter-refactor')
+
+-- Dev plugins
+-- require('plugins.pageline')

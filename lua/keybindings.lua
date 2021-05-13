@@ -29,9 +29,6 @@ vim.api.nvim_set_keymap('n', '<c-t>x', ':tabclose<cr>', {})
 
 -- File / Code searching
 -- nmap <c-x>b :Buffers<CR>
--- nmap <c-x>f :FZF<CR> -- FZF
-
--- nmap <c-x>a :Rg<space>
 -- nmap <c-x><c-f> :cd ~/
 
 -- Clear / search
@@ -58,7 +55,7 @@ vim.api.nvim_set_keymap('n', '<bs>', '<C-^>', {})
 
 -- Tabularize Bindings
 -- map <Leader>a :Tabularize /
-vim.api.nvim_set_keymap('n', '<leader>a', ':Tabularize /', {})
+vim.api.nvim_set_keymap('v', '<leader>a', ':Tabularize /', {})
 
 -- Toggle background color (light and dark theme)
 -- map <Leader>tt :let &background = ( &background == "dark"? "light" : "dark" )<CR>
