@@ -42,6 +42,18 @@ g.which_key_map = {
     g = "github-browse"
   },
 
+  c = {
+    name = "code",
+  },
+
+  g = {
+    name = "git",
+    c = "Create a commit",
+    s = "Show git status",
+    d = "Diff uncommitted files",
+    b = "Show branch diff"
+  },
+
   p = 'prettier',
   a = "tabularize",
   ['/'] = 'clear-search',

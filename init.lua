@@ -19,6 +19,8 @@ require('plugins.tagbar')
 require('plugins.codi')
 require('plugins.prettier')
 require('plugins.which-key')
+require('plugins.trouble')
+require('plugins.diffview')
 
 -- LSP
 require('lsp')
@@ -28,8 +30,12 @@ require('ui')
 require('theme')
 require('plugins.vim-illuminate')
 require('plugins.indent-line')
-require('plugins.galaxyline')
+-- require('plugins.galaxyline')
 require('plugins.treesitter-refactor')
 
 -- Dev plugins
 -- require('plugins.pageline')
+
+
+vim.api.nvim_set_keymap('n', '<leader>gc', ':Git commit<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>gs', ':Git status<cr>', {})

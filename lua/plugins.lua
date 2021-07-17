@@ -28,6 +28,7 @@ return require('packer').startup(function(use)
   use 'preservim/tagbar'           -- Tagbar
   use 'andymass/vim-matchup'       -- Improve %
   use 'metakirby5/codi.vim'        -- Scratchpad
+  use 'sindrets/diffview.nvim'
 
   -- Uncomment this if you need to install fzf. It throws an error on the daily
   use { 'junegunn/fzf', { run = ":call fzf#install()" } }
@@ -38,9 +39,9 @@ return require('packer').startup(function(use)
   use 'Th3Whit3Wolf/onebuddy'
   use 'kyazdani42/nvim-web-devicons' -- Recommended (for coloured icons)
   use 'RRethy/vim-illuminate'        -- Highlight token under cursor
-  use { 'lukas-reineke/indent-blankline.nvim', branch = 'lua' }
+  use { 'lukas-reineke/indent-blankline.nvim' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  use { 'glepnir/galaxyline.nvim', branch = 'main' }
+  -- use { 'glepnir/galaxyline.nvim', branch = 'main' }
   use 'nvim-treesitter/nvim-treesitter-refactor'
 
   -- LSP
@@ -71,6 +72,9 @@ return require('packer').startup(function(use)
     'kana/vim-textobj-user',
     requires = { 'whatyouhide/vim-textobj-xmlattr' }
   }
+
+  -- Lua
+  use { "folke/trouble.nvim", requires = "kyazdani42/nvim-web-devicons" }
 
   use 'rafcamlet/nvim-luapad'
 end)
