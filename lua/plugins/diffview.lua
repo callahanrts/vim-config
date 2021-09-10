@@ -10,7 +10,7 @@ require'diffview'.setup {
   diff_binaries = false,    -- Show diffs for binaries
   file_panel = {
     width = 35,
-    use_icons = true        -- Requires nvim-web-devicons
+    -- use_icons = true        -- Requires nvim-web-devicons -- this was deprecated
   },
   key_bindings = {
     -- disable_defaults = false,                   -- Disable the default key bindings

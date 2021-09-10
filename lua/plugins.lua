@@ -37,11 +37,15 @@ return require('packer').startup(function(use)
   -- For looks
   use 'tjdevries/colorbuddy.vim'
   use 'Th3Whit3Wolf/onebuddy'
+  -- use 'navarasu/onedark.nvim'
   use 'kyazdani42/nvim-web-devicons' -- Recommended (for coloured icons)
   use 'RRethy/vim-illuminate'        -- Highlight token under cursor
   use { 'lukas-reineke/indent-blankline.nvim' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
-  -- use { 'glepnir/galaxyline.nvim', branch = 'main' }
+  use {
+    'hoob3rt/lualine.nvim',
+    requires = {'kyazdani42/nvim-web-devicons', opt = true}
+  }
   use 'nvim-treesitter/nvim-treesitter-refactor'
 
   -- LSP

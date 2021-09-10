@@ -5,9 +5,9 @@
 -- https://github.com/nanotee/nvim-lua-guide#calling-vimscript-functions
 
 -- core
-require('application')
+require('core.application')
 require('plugins')
-require('keybindings')
+require('core.keybindings')
 
 -- plugins
 require('plugins.autopairs')
@@ -31,6 +31,8 @@ require('theme')
 require('plugins.vim-illuminate')
 require('plugins.indent-line')
 -- require('plugins.galaxyline')
+require('plugins.lualine')
+require('treesitter')
 require('plugins.treesitter-refactor')
 
 -- Dev plugins
