@@ -8,6 +8,7 @@
 require('core.application')
 require('plugins')
 require('core.keybindings')
+require('core.autocmds')
 
 -- plugins
 require('plugins.autopairs')

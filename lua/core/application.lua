@@ -41,15 +41,3 @@ end
 -- Change backup directory so git doesn't get cluttered
 vim.cmd("silent !mkdir ~/.config/nvim/backup > /dev/null 2>&1")
 vim.cmd("set backupdir=~/.config/nvim/backup")
-
--- Auocommands
--- Turn off line numbers in terminal mode
-vim.cmd("au TermOpen * setlocal nonumber norelativenumber")
-vim.cmd("au TermOpen * :set winhighlight=Normal:ColorColumn")
-
--- Automatically resize splits to equal sizes when vim is resized
-vim.cmd("autocmd VimResized * wincmd =")
-
--- Remove trailing whitespace on save
-vim.cmd("autocmd BufWritePre * :%s/\\s\\+$//e")
-vim.cmd("autocmd FileType markdown set spell")
