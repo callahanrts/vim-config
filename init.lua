@@ -39,5 +39,3 @@ require('plugins.treesitter-refactor')
 -- require('plugins.pageline')
 
 
-vim.api.nvim_set_keymap('n', '<leader>gc', ':Git commit<cr>', {})
-vim.api.nvim_set_keymap('n', '<leader>gs', ':Git status<cr>', {})

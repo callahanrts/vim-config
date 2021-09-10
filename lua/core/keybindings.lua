@@ -95,3 +95,8 @@ vim.api.nvim_set_keymap('', '<C-p>', '{', {})
 -- command! ZoomToggle call s:ZoomToggle()
 -- ]])
 -- nnoremap <leader>z :ZoomToggle<CR>
+
+
+-- Git commands
+vim.api.nvim_set_keymap('n', '<leader>gc', ':Git commit<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>gs', ':Git<cr>', {})

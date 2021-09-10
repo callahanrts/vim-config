@@ -58,7 +58,7 @@ return require('packer').startup(function(use)
   -- Plug 'thomasfaingnaert/vim-lsp-ultisnips'
 
   -- Show menu for leader commands
-  use 'liuchengxu/vim-which-key'
+  use { "folke/which-key.nvim" }
 
   use {
     'prettier/vim-prettier',
