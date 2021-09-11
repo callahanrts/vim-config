@@ -6,11 +6,11 @@ local autocommands = {
       "*",
       ":%s/\\s\\+$//e",
     },
-    -- {
-    --   "Filetype",
-    --   "*",
-    --   "lua require('utils.ft').do_filetype(vim.fn.expand(\"<amatch>\"))",
-    -- },
+    {
+      "Filetype",
+      "*",
+      "lua require('utils.ft').do_filetype(vim.fn.expand(\"<amatch>\"))",
+    },
     -- {
     --   "FileType",
     --   "qf",

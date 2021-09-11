@@ -50,6 +50,7 @@ return require('packer').startup(function(use)
 
   -- LSP
   use 'neovim/nvim-lspconfig'
+  use { "kabouzeid/nvim-lspinstall", event = "VimEnter" }
   use 'hrsh7th/nvim-compe' -- Completion
   use 'ray-x/lsp_signature.nvim' -- Signatures in completion
   use { 'glepnir/lspsaga.nvim', branch = 'main' }
@@ -82,5 +83,4 @@ return require('packer').startup(function(use)
 
   use 'rafcamlet/nvim-luapad'
 
-  use { "kabouzeid/nvim-lspinstall", event = "VimEnter" }
 end)
