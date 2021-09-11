@@ -1,17 +1,14 @@
-" Automatically generated packer.nvim plugin loader code
+-- Automatically generated packer.nvim plugin loader code
 
-if !has('nvim-0.5')
-  echohl WarningMsg
-  echom "Invalid Neovim version for packer.nvim!"
-  echohl None
-  finish
-endif
+if vim.api.nvim_call_function('has', {'nvim-0.5'}) ~= 1 then
+  vim.api.nvim_command('echohl WarningMsg | echom "Invalid Neovim version for packer.nvim! | echohl None"')
+  return
+end
 
-packadd packer.nvim
+vim.api.nvim_command('packadd packer.nvim')
 
-try
+local no_errors, error_msg = pcall(function()
 
-lua << END
   local time
   local profile_info
   local should_profile = false
@@ -72,6 +69,34 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["cmp-buffer"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp-buffer"
+  },
+  ["cmp-calc"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp-calc"
+  },
+  ["cmp-nvim-lsp"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp"
+  },
+  ["cmp-nvim-lua"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp-nvim-lua"
+  },
+  ["cmp-path"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp-path"
+  },
+  ["cmp-spell"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp-spell"
+  },
+  ["cmp-treesitter"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp-treesitter"
+  },
   ["codi.vim"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/codi.vim"
@@ -80,17 +105,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
   },
-  fzf = {
+  ["diffview.nvim"] = {
     loaded = true,
-    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/fzf"
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/diffview.nvim"
   },
   ["fzf.vim"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/fzf.vim"
-  },
-  ["galaxyline.nvim"] = {
-    loaded = true,
-    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/galaxyline.nvim"
   },
   ["gitsigns.nvim"] = {
     loaded = true,
@@ -112,17 +133,26 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/lspsaga.nvim"
   },
+  ["lualine.nvim"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/lualine.nvim"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/nvim-autopairs"
   },
-  ["nvim-compe"] = {
+  ["nvim-cmp"] = {
     loaded = true,
-    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/nvim-compe"
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/nvim-cmp"
   },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
+  },
+  ["nvim-lspinstall"] = {
+    loaded = false,
+    needs_bufread = false,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/opt/nvim-lspinstall"
   },
   ["nvim-luapad"] = {
     loaded = true,
@@ -172,6 +202,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/tagbar"
   },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/telescope.nvim"
+  },
   ["trouble.nvim"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/trouble.nvim"
@@ -217,9 +251,13 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/vim-textobj-xmlattr"
   },
-  ["vim-which-key"] = {
+  ["vim-vsnip"] = {
     loaded = true,
-    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/vim-which-key"
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/vim-vsnip"
+  },
+  ["which-key.nvim"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/which-key.nvim"
   }
 }
 
@@ -240,6 +278,10 @@ vim.cmd [[au FileType vue ++once lua require("packer.load")({'vim-prettier'}, { 
 vim.cmd [[au FileType yaml ++once lua require("packer.load")({'vim-prettier'}, { ft = "yaml" }, _G.packer_plugins)]]
 vim.cmd [[au FileType html ++once lua require("packer.load")({'vim-prettier'}, { ft = "html" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
+  -- Event lazy-loads
+time([[Defining lazy-load event autocommands]], true)
+vim.cmd [[au VimEnter * ++once lua require("packer.load")({'nvim-lspinstall'}, { event = "VimEnter *" }, _G.packer_plugins)]]
+time([[Defining lazy-load event autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]
 time([[Sourcing ftdetect script at: /Users/cody/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/css.vim]], true)
@@ -275,6 +317,9 @@ time([[Sourcing ftdetect script at: /Users/cody/.local/share/nvim/site/pack/pack
 time([[Sourcing ftdetect script at: /Users/cody/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/scss.vim]], true)
 vim.cmd [[source /Users/cody/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/scss.vim]]
 time([[Sourcing ftdetect script at: /Users/cody/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/scss.vim]], false)
+time([[Sourcing ftdetect script at: /Users/cody/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/svelte.vim]], true)
+vim.cmd [[source /Users/cody/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/svelte.vim]]
+time([[Sourcing ftdetect script at: /Users/cody/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/svelte.vim]], false)
 time([[Sourcing ftdetect script at: /Users/cody/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/typescript.vim]], true)
 vim.cmd [[source /Users/cody/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/typescript.vim]]
 time([[Sourcing ftdetect script at: /Users/cody/.local/share/nvim/site/pack/packer/opt/vim-prettier/ftdetect/typescript.vim]], false)
@@ -290,11 +335,8 @@ time([[Sourcing ftdetect script at: /Users/cody/.local/share/nvim/site/pack/pack
 vim.cmd("augroup END")
 if should_profile then save_profiles() end
 
-END
+end)
 
-catch
-  echohl ErrorMsg
-  echom "Error in packer_compiled: " .. v:exception
-  echom "Please check your config for correctness"
-  echohl None
-endtry
+if not no_errors then
+  vim.api.nvim_command('echohl ErrorMsg | echom "Error in packer_compiled: '..error_msg..'" | echom "Please check your config for correctness" | echohl None')
+end

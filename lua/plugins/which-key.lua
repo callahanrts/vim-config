@@ -72,6 +72,17 @@ wk.register({
     a = "LSP code actions",
     t = "Show code diagnostics"
   },
+  f = {
+    name = "Find",
+    b = "Buffers",
+    t = "Text (grep)",
+    m = "Marks",
+    h = "Help tags",
+    n = "Man pages",
+    j = "Jump list",
+    r = "Registers",
+    c = "Current buffer fuzzy"
+  },
   g = {
     name = "Git",
     b = "Diff branch from master",

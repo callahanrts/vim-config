@@ -6,6 +6,7 @@ local colors = {
   cursor_bg = "#282c34",
   divider = '#3b4048',
   dark = "#282c34",
+  darker = "#1f2227",
   accent = "#BBBBBB",
   dark_gray = "#2a2f3e",
   context = "#4b5263",

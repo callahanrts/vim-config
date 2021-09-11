@@ -31,8 +31,13 @@ return require('packer').startup(function(use)
   use 'sindrets/diffview.nvim'
 
   -- Uncomment this if you need to install fzf. It throws an error on the daily
-  use { 'junegunn/fzf', { run = ":call fzf#install()" } }
+  -- use { 'junegunn/fzf', { run = ":call fzf#install()" } }
   use 'junegunn/fzf.vim'
+
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = { {'nvim-lua/plenary.nvim'} }
+  }
 
   -- For looks
   use 'tjdevries/colorbuddy.vim'
@@ -51,7 +56,26 @@ return require('packer').startup(function(use)
   -- LSP
   use 'neovim/nvim-lspconfig'
   use { "kabouzeid/nvim-lspinstall", event = "VimEnter" }
-  use 'hrsh7th/nvim-compe' -- Completion
+  -- Install nvim-cmp, and buffer source as a dependency
+  use {
+    "hrsh7th/nvim-cmp",
+    requires = {
+      "hrsh7th/vim-vsnip",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-nvim-lua",
+      "hrsh7th/cmp-calc",
+      "ray-x/cmp-treesitter",
+      "f2fora/cmp-spell",
+      "L3MON4D3/LuaSnip",
+      "saadparwaiz1/cmp_luasnip",
+      -- { 'tzachar/cmp-tabnine', { run = './install.sh' } }
+    }
+  }
+
+  use "rafamadriz/friendly-snippets"
+
   use 'ray-x/lsp_signature.nvim' -- Signatures in completion
   use { 'glepnir/lspsaga.nvim', branch = 'main' }
   use 'onsails/lspkind-nvim'

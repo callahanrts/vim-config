@@ -11,35 +11,32 @@ require('telescope').setup{
       '--column',
       '--smart-case'
     },
-    prompt_position = "bottom",
-    prompt_prefix = "> ",
-    selection_caret = "> ",
+    -- prompt_position = "bottom",
+    prompt_prefix = " ",
+    selection_caret = " ",
     entry_prefix = "  ",
     initial_mode = "insert",
     selection_strategy = "reset",
     sorting_strategy = "descending",
     layout_strategy = "horizontal",
-    layout_defaults = {
+    layout_config = {
       horizontal = {
         mirror = false,
+        preview_width = 100
       },
-      vertical = {
-        mirror = false,
-      },
+      -- vertical = {
+      --   mirror = false,
+      -- },
     },
     file_sorter =  require'telescope.sorters'.get_fuzzy_file,
     file_ignore_patterns = {},
     generic_sorter =  require'telescope.sorters'.get_generic_fuzzy_sorter,
-    shorten_path = true,
     winblend = 0,
-    width = 0.75,
-    preview_cutoff = 120,
-    results_height = 1,
-    results_width = 0.8,
     border = {},
     borderchars = { '─', '│', '─', '│', '╭', '╮', '╯', '╰' },
     color_devicons = true,
     use_less = true,
+    path_display = {},
     set_env = { ['COLORTERM'] = 'truecolor' }, -- default = nil,
     file_previewer = require'telescope.previewers'.vim_buffer_cat.new,
     grep_previewer = require'telescope.previewers'.vim_buffer_vimgrep.new,
@@ -47,6 +44,11 @@ require('telescope').setup{
 
     -- Developer configurations: Not meant for general override
     buffer_previewer_maker = require'telescope.previewers'.buffer_previewer_maker,
+
+    -- width = 0.75,
+    -- preview_cutoff = 120,
+    -- results_height = 1,
+    -- results_width = 0.8,
 
     mappings = {
       i = {
@@ -67,6 +69,15 @@ require('telescope').setup{
   }
 }
 
-vim.api.nvim_set_keymap('n', '<c-x>b', ':Telescope buffers<cr>', {})
-vim.api.nvim_set_keymap('n', '<c-x>f', ':Telescope find_files<cr>', {})
-vim.api.nvim_set_keymap('n', '<c-x>a', ':Telescope live_grep<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>fb', ':Telescope buffers<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>ft', ':Telescope live_grep<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>fm', ':Telescope marks<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>fn', ':Telescope man_pages<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>fj', ':Telescope jumplist<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>fr', ':Telescope registers<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>fc', ':Telescope current_buffer_fuzzy_find<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>fh', ':Telescope help_tags<cr>', {})
+
+-- Find files (with shortcut)
+vim.api.nvim_set_keymap('n', '<leader>.', ':Telescope find_files<cr>', {})
+vim.api.nvim_set_keymap('n', '<leader>ff', ':Telescope find_files<cr>', {})
