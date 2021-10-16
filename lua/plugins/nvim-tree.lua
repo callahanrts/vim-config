@@ -1,8 +1,6 @@
 local g = vim.g
 g.nvim_tree_ignore = { '.git', '.DS_Store', 'node_modules', '.cache' }
 g.nvim_tree_indent_markers = 1 --"0 by default, this option shows indent markers when folders are open
-g.nvim_tree_follow = 1 --"0 by default, this option allows the cursor to be updated when entering a buffer
-g.nvim_tree_auto_close = 1 --0 by default, closes the tree when it's the last window
 g.nvim_tree_auto_ignore_ft = 'startify' --"empty by default, don't auto open tree on specific filetypes.
 g.nvim_tree_side = 'left' -- left by default
 g.nvim_tree_width = 35 -- 30 by default
@@ -47,6 +45,7 @@ g.nvim_tree_show_icons = {
   files = 1,
 }
 
+-- [NvimTree] following options are now set in the setup (:help nvim-tree.setup): nvim_tree_auto_close | nvim_tree_follow
 g.nvim_tree_icons = {
   default = '',
   symlink = '',
@@ -64,4 +63,49 @@ g.nvim_tree_icons = {
     empty_open = "",
     symlink = ""
   }
+}
+
+require'nvim-tree'.setup {
+  nvim_tree_follow = 1,     -- 0 by default, this option allows the cursor to be updated when entering a buffer
+  nvim_tree_auto_close = 1, -- 0 by default, closes the tree when it's the last window
+--   disable_netrw       = true,
+--   hijack_netrw        = true,
+--   open_on_setup       = false,
+--   ignore_ft_on_setup  = {},
+--   update_to_buf_dir   = {
+--     enable = true,
+--     auto_open = true,
+--   },
+--   auto_close          = false,
+--   open_on_tab         = false,
+--   hijack_cursor       = false,
+--   update_cwd          = false,
+--   diagnostics         = {
+--     enable = false,
+--     icons = {
+--       hint = "",
+--       info = "",
+--       warning = "",
+--       error = "",
+--     }
+--   },
+--   update_focused_file = {
+--     enable      = false,
+--     update_cwd  = false,
+--     ignore_list = {}
+--   },
+--   system_open = {
+--     cmd  = nil,
+--     args = {}
+--   },
+--   view = {
+--     width = 30,
+--     height = 30,
+--     side = 'left',
+--     auto_resize = false,
+--     mappings = {
+--       custom_only = false,
+--       list = {}
+--     }
+--   }
 }

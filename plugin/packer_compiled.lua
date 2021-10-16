@@ -69,13 +69,13 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  LuaSnip = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/LuaSnip"
+  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp-buffer"
-  },
-  ["cmp-calc"] = {
-    loaded = true,
-    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp-calc"
   },
   ["cmp-nvim-lsp"] = {
     loaded = true,
@@ -89,13 +89,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp-path"
   },
-  ["cmp-spell"] = {
+  cmp_luasnip = {
     loaded = true,
-    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp-spell"
-  },
-  ["cmp-treesitter"] = {
-    loaded = true,
-    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp-treesitter"
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/cmp_luasnip"
   },
   ["codi.vim"] = {
     loaded = true,
@@ -108,6 +104,14 @@ _G.packer_plugins = {
   ["diffview.nvim"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/diffview.nvim"
+  },
+  ["friendly-snippets"] = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/friendly-snippets"
+  },
+  fzf = {
+    loaded = true,
+    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/fzf"
   },
   ["fzf.vim"] = {
     loaded = true,
@@ -202,10 +206,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/tagbar"
   },
-  ["telescope.nvim"] = {
-    loaded = true,
-    path = "/Users/cody/.local/share/nvim/site/pack/packer/start/telescope.nvim"
-  },
   ["trouble.nvim"] = {
     loaded = true,
     path = "/Users/cody/.local/share/nvim/site/pack/packer/start/trouble.nvim"
@@ -266,8 +266,6 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-prettier'}, { ft = "javascript" }, _G.packer_plugins)]]
-vim.cmd [[au FileType typescript ++once lua require("packer.load")({'vim-prettier'}, { ft = "typescript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType css ++once lua require("packer.load")({'vim-prettier'}, { ft = "css" }, _G.packer_plugins)]]
 vim.cmd [[au FileType less ++once lua require("packer.load")({'vim-prettier'}, { ft = "less" }, _G.packer_plugins)]]
 vim.cmd [[au FileType scss ++once lua require("packer.load")({'vim-prettier'}, { ft = "scss" }, _G.packer_plugins)]]
@@ -277,6 +275,8 @@ vim.cmd [[au FileType markdown ++once lua require("packer.load")({'vim-prettier'
 vim.cmd [[au FileType vue ++once lua require("packer.load")({'vim-prettier'}, { ft = "vue" }, _G.packer_plugins)]]
 vim.cmd [[au FileType yaml ++once lua require("packer.load")({'vim-prettier'}, { ft = "yaml" }, _G.packer_plugins)]]
 vim.cmd [[au FileType html ++once lua require("packer.load")({'vim-prettier'}, { ft = "html" }, _G.packer_plugins)]]
+vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-prettier'}, { ft = "javascript" }, _G.packer_plugins)]]
+vim.cmd [[au FileType typescript ++once lua require("packer.load")({'vim-prettier'}, { ft = "typescript" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
   -- Event lazy-loads
 time([[Defining lazy-load event autocommands]], true)

@@ -31,13 +31,18 @@ return require('packer').startup(function(use)
   use 'sindrets/diffview.nvim'
 
   -- Uncomment this if you need to install fzf. It throws an error on the daily
-  -- use { 'junegunn/fzf', { run = ":call fzf#install()" } }
+  use { 'junegunn/fzf', { run = './install --bin' } }
   use 'junegunn/fzf.vim'
-
-  use {
-    'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+  use { 'ibhagwan/fzf-lua',
+    requires = {
+      'vijaymarupudi/nvim-fzf',
+      'kyazdani42/nvim-web-devicons' } -- optional for icons
   }
+
+  -- use {
+  --   'nvim-telescope/telescope.nvim',
+  --   requires = { {'nvim-lua/plenary.nvim'} }
+  -- }
 
   -- For looks
   use 'tjdevries/colorbuddy.vim'
@@ -65,9 +70,9 @@ return require('packer').startup(function(use)
       "hrsh7th/cmp-nvim-lsp",
       "hrsh7th/cmp-path",
       "hrsh7th/cmp-nvim-lua",
-      "hrsh7th/cmp-calc",
-      "ray-x/cmp-treesitter",
-      "f2fora/cmp-spell",
+      -- "hrsh7th/cmp-calc",
+      -- "ray-x/cmp-treesitter",
+      -- "f2fora/cmp-spell",
       "L3MON4D3/LuaSnip",
       "saadparwaiz1/cmp_luasnip",
       -- { 'tzachar/cmp-tabnine', { run = './install.sh' } }

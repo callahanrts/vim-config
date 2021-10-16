@@ -3,8 +3,8 @@ local cb = require'diffview.config'.diffview_callback
 
 vim.cmd("set fillchars+=diff:╱")
 
-vim.api.nvim_set_keymap('n', '<leader>gd', ':DiffviewOpen<cr>', {})
-vim.api.nvim_set_keymap('n', '<leader>gb', ':DiffviewOpen master<cr>', {})
+-- vim.api.nvim_set_keymap('n', '<leader>gd', ':DiffviewOpen<cr>', {})
+-- vim.api.nvim_set_keymap('n', '<leader>gb', ':DiffviewOpen master<cr>', {})
 
 require'diffview'.setup {
   diff_binaries = false,    -- Show diffs for binaries

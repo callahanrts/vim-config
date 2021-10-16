@@ -106,8 +106,8 @@ require'lspconfig'.clangd.setup {
 }
 
 -- TODO: get this to work
-require("luasnip/loaders/from_vscode").lazy_load({
-  paths = "../core/snippets/"
-})
+require("luasnip/loaders/from_vscode").lazy_load()-- {
+--   paths = "../core/snippets/"
+-- })
 
 cmp.setup(config)
