@@ -75,13 +75,63 @@ wk.register({
   f = {
     name = "Find",
     b = "Buffers",
-    t = "Text (grep)",
+    f = "Files",
+    h = "Here (in buffer)",
+    k = "Keymaps",
+    l = "Lookup find commands",
     m = "Marks",
-    h = "Help tags",
-    n = "Man pages",
-    j = "Jump list",
+    ['/'] = "Previous grep",
     r = "Registers",
-    c = "Current buffer fuzzy"
+    t = "Text (grep)",
+    w = "Word",
+    p = "Man pages",
+
+    c = {
+      name = "Code",
+      a = 'Code actions',
+      c = "Declarations",
+      d = "Definitions",
+      i = "Implementations",
+      r = "References",
+      t = "Type definitions",
+
+      p = {
+        name = "Problems (diagnostics)",
+        d = "Document",
+        w = "Workspace"
+      }
+    },
+
+    s = {
+      name = "Symbols",
+      d = "Document",
+      w = "Workspace",
+    },
+
+    g = {
+      name = "Git",
+      b = "Find Branch",
+      c = "Commit",
+      f = "Find files",
+      h = "File history",
+      s = "Preview status",
+    },
+
+    o = {
+      name = "Other",
+      b = "FzfLua builtin commands",
+      f = "Filetypes",
+      h = "Help tags",
+      k = "Keymaps",
+      m = "Marks",
+      p = "Man pages",
+      r = "Registers",
+      t = {
+        name = "Tags",
+        p = "Project tags",
+        b = "Buffer tags",
+      },
+    }
   },
   g = {
     name = "Git",

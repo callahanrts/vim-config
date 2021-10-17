@@ -1,15 +1,15 @@
 -- FZF.nvim
 
-vim.g.fzf_action = {
-  ['ctrl-t'] = 'tab split',
-  ['ctrl-i'] = 'split',
-  ['ctrl-s'] = 'vsplit'
-}
+-- vim.g.fzf_action = {
+--   ['ctrl-t'] = 'tab split',
+--   ['ctrl-i'] = 'split',
+--   ['ctrl-s'] = 'vsplit'
+-- }
 
-vim.cmd([[
-" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
-command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
-]])
+-- vim.cmd([[
+-- " Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
+-- command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
+-- ]])
 
 
 -- Find files (with shortcut)
@@ -31,50 +31,55 @@ command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-hea
 -- Fzf-lua
 
 -- Search 'f'
-vim.api.nvim_set_keymap('n', '<leader>ff', ":FzfLua files<cr>", { noremap = true, silent = true })    -- Find files
-vim.api.nvim_set_keymap('n', '<leader>.', ":FzfLua git_files<cr>", { noremap = true, silent = true }) -- Find git files
-vim.api.nvim_set_keymap('n', '<leader>ft', ':FzfLua grep<cr>', {})       -- Find text / Grep
-vim.api.nvim_set_keymap('n', '<leader>,', ":FzfLua grep<cr>", {})        -- Grep shortcut
-vim.api.nvim_set_keymap('n', '<leader>fl', ":FzfLua grep_last<cr>", {})  -- Find last
-vim.api.nvim_set_keymap('n', '<leader>fw', ":FzfLua grep_cword<cr>", {}) -- Find word
-vim.api.nvim_set_keymap('n', '<leader>fh', ":FzfLua grep_cword<cr>", {}) -- Find here
-vim.api.nvim_set_keymap('n', '<leader>fb', ':FzfLua buffers<cr>', {})    -- Find buffers
+vim.api.nvim_set_keymap('n',  '<leader>ff',  ":FzfLua files<cr>",       {}) -- Find files
+vim.api.nvim_set_keymap('n',  '<leader>.',   ":FzfLua git_files<cr>",   {}) -- Find git files
+vim.api.nvim_set_keymap('n',  '<leader>ft',  ':FzfLua grep<cr>',        {}) -- Find text / Grep
+vim.api.nvim_set_keymap('n',  '<leader>,',   ":FzfLua grep<cr>",        {}) -- Grep shortcut
+vim.api.nvim_set_keymap('n',  '<leader>f/',  ":FzfLua grep_last<cr>",   {}) -- Find last
+vim.api.nvim_set_keymap('n',  '<leader>fw',  ":FzfLua grep_cword<cr>",  {}) -- Find word
+vim.api.nvim_set_keymap('n',  '<leader>fh',  ":FzfLua grep_cword<cr>",  {}) -- Find here
+vim.api.nvim_set_keymap('n',  '<leader>fb',  ':FzfLua buffers<cr>',     {}) -- Find buffers
 
 -- Git
-vim.api.nvim_set_keymap('n', '<leader>gf', ':FzfLua git_files<cr>', {})       -- Git files
-vim.api.nvim_set_keymap('n', '<leader>gp', ':FzfLua git_status<cr>', {})       -- Git preview
-vim.api.nvim_set_keymap('n', '<leader>gh', ':FzfLua git_commits<cr>', {})       -- Git history
-vim.api.nvim_set_keymap('n', '<leader>gfh', ':FzfLua git_bcommits<cr>', {})       -- Git file history
-vim.api.nvim_set_keymap('n', '<leader>gb', ':FzfLua git_branches<cr>', {})       -- Git branches
+vim.api.nvim_set_keymap('n',  '<leader>fgf',  ':FzfLua git_files<cr>',     {}) -- Git files
+vim.api.nvim_set_keymap('n',  '<leader>fgs',  ':FzfLua git_status<cr>',    {}) -- Git preview
+vim.api.nvim_set_keymap('n',  '<leader>fgc',  ':FzfLua git_commits<cr>',   {}) -- Git history
+vim.api.nvim_set_keymap('n',  '<leader>fgh',  ':FzfLua git_bcommits<cr>',  {}) -- Git file history
+vim.api.nvim_set_keymap('n',  '<leader>fgb',  ':FzfLua git_branches<cr>',  {}) -- Git branches
 
 -- LSP
--- lsp_references             	 References
--- lsp_definitions            	 Definitions
--- lsp_declarations           	 Declarations
--- lsp_typedefs               	 Type Definitions
--- lsp_implementations        	 Implementations
--- lsp_document_symbols       	 Document Symbols
--- lsp_workspace_symbols      	 Workspace Symbols
--- lsp_live_workspace_symbols 	 Workspace Symbols (live query)
--- lsp_code_actions           	 Code Actions
--- lsp_document_diagnostics   	 Document Diagnostics
--- lsp_workspace_diagnostics  	 Workspace Diagnostics
+vim.api.nvim_set_keymap('n',     '<leader>fcr',   ':FzfLua lsp_references<cr>',          {}) -- References
+vim.api.nvim_set_keymap('n',     '<leader>fcd',   ':FzfLua lsp_definitions<cr>',         {}) -- Definitions
+vim.api.nvim_set_keymap('n',     '<leader>fcc',   ':FzfLua lsp_declarations',            {}) -- Declarations
+vim.api.nvim_set_keymap('n',     '<leader>fct',   ':FzfLua lsp_typedefs',                {}) -- Type Definitions
+vim.api.nvim_set_keymap('n',     '<leader>fci',   ':FzfLua lsp_implementations',         {}) -- Implementations
+vim.api.nvim_set_keymap('n',     '<leader>fcsd',  ':FzfLua lsp_document_symbols',        {}) -- Document Symbols
+vim.api.nvim_set_keymap('n',     '<leader>fcsw',  ':FzfLua lsp_workspace_symbols',       {}) -- Workspace Symbols
+                                                                                             -- vim.api.nvim_set_keymap('n',  '<leader>fc',    ':FzfLua lsp_live_workspace_symbols',  {}) -- Workspace Symbols (live query)
+vim.api.nvim_set_keymap('n',     '<leader>fca',   ':FzfLua lsp_code_actions',            {}) -- Code Actions
+vim.api.nvim_set_keymap('n',     '<leader>fcpd',  ':FzfLua lsp_document_diagnostics',    {}) -- Document Diagnostics
+vim.api.nvim_set_keymap('n',     '<leader>fcpw',  ':FzfLua lsp_workspace_diagnostics',   {}) -- Workspace Diagnostics
 
--- MISC
--- builtin         	 fzf-lua builtin commands
--- help_tags       	 help tags
--- man_pages       	 man pages
--- colorschemes    	 color schemes
--- commands        	 neovim commands
--- command_history 	 command history
--- search_history  	 search history
--- marks           	 :marks
--- registers       	 :registers
--- keymaps         	 key mappings
--- spell_suggest   	 spelling suggestions
--- tags            	 project tags
--- btags           	 buffer tags
--- filetypes       	 neovim filetypes
+-- MISC (o - other)
+vim.api.nvim_set_keymap('n',  '<leader>fob',   ':FzfLua builtin',          {}) -- fzf-lua builtin commands
+vim.api.nvim_set_keymap('n',  '<leader>fl',    ':FzfLua builtin',          {}) -- fzf-lua builtin commands
+vim.api.nvim_set_keymap('n',  '<leader>foh',   ':FzfLua help_tags',        {}) -- Help tags
+vim.api.nvim_set_keymap('n',  '<leader>fop',   ':FzfLua man_pages',        {}) -- Man pages
+vim.api.nvim_set_keymap('n',  '<leader>fp',   ':FzfLua man_pages',        {}) -- Man pages
+vim.api.nvim_set_keymap('n',  '<leader>foc',   ':FzfLua color_schemes',    {}) -- Colorschemes
+vim.api.nvim_set_keymap('n',  '<leader>fon',   ':FzfLua commands',         {}) -- Neovim commands
+vim.api.nvim_set_keymap('n',  '<leader>foN',   ':FzfLua command_history',  {}) -- Command history
+vim.api.nvim_set_keymap('n',  '<leader>fo/',   ':FzfLua search_history',   {}) -- Search
+vim.api.nvim_set_keymap('n',  '<leader>fom',   ':FzfLua marks',            {}) -- Marks
+vim.api.nvim_set_keymap('n',  '<leader>fm',    ':FzfLua marks',            {}) -- Marks
+vim.api.nvim_set_keymap('n',  '<leader>for',   ':FzfLua registers',        {}) -- Registers
+vim.api.nvim_set_keymap('n',  '<leader>fr',    ':FzfLua registers',        {}) -- Registers
+vim.api.nvim_set_keymap('n',  '<leader>fok',   ':FzfLua keymaps',          {}) -- Key mappings
+vim.api.nvim_set_keymap('n',  '<leader>fk',    ':FzfLua keymaps',          {}) -- Key mappings
+vim.api.nvim_set_keymap('n',  '<leader>fos',   ':FzfLua spell_suggest',    {}) -- Spelling suggestions
+vim.api.nvim_set_keymap('n',  '<leader>fotp',  ':FzfLua tags',             {}) -- Project tags
+vim.api.nvim_set_keymap('n',  '<leader>fotb',  ':FzfLua btags',            {}) -- Buffer tags
+vim.api.nvim_set_keymap('n',  '<leader>fof',   ':FzfLua filetypes',        {}) -- File types
 -- packadd         	 :packadd
 
 

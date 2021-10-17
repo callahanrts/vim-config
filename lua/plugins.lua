@@ -53,7 +53,7 @@ return require('packer').startup(function(use)
   use { 'lukas-reineke/indent-blankline.nvim' }
   use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
   use {
-    'hoob3rt/lualine.nvim',
+    'nvim-lualine/lualine.nvim',
     requires = {'kyazdani42/nvim-web-devicons', opt = true}
   }
   use 'nvim-treesitter/nvim-treesitter-refactor'
