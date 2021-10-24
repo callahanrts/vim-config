@@ -29,6 +29,7 @@ return require('packer').startup(function(use)
   use 'andymass/vim-matchup'       -- Improve %
   use 'metakirby5/codi.vim'        -- Scratchpad
   use 'sindrets/diffview.nvim'
+  use 'kristijanhusak/orgmode.nvim' -- Org mode
 
   -- Uncomment this if you need to install fzf. It throws an error on the daily
   use { 'junegunn/fzf', { run = './install --bin' } }
@@ -36,7 +37,8 @@ return require('packer').startup(function(use)
   use { 'ibhagwan/fzf-lua',
     requires = {
       'vijaymarupudi/nvim-fzf',
-      'kyazdani42/nvim-web-devicons' } -- optional for icons
+      'kyazdani42/nvim-web-devicons'
+    } -- optional for icons
   }
 
   -- use {
@@ -112,4 +114,6 @@ return require('packer').startup(function(use)
 
   use 'rafcamlet/nvim-luapad'
 
+  -- Local
+  use '~/.config/nvim/my_plugins/pageline.nvim'
 end)

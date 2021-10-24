@@ -16,14 +16,15 @@ local function rightMarker(prefs, current)
   return "%#PagelineRight#" .. prefs.tab.separator.right.character
 end
 
-local function labelSection(page, current)
+local function labelSection(page, index, current)
   local highlight = "%#PageLine#"
+  local label = page.name or page.id
 
   if current then
     highlight = "%#PageLineSel#"
   end
 
-  return highlight .. page.id
+  return highlight .. label
 end
 
 local function rightSection(prefs, page, current)
@@ -39,7 +40,7 @@ local function rightSection(prefs, page, current)
 
   local modified = string.rep(" ", string.len(ctx.modified.character))
 
-  if page.modified then
+  if page.modified > 0 then
     modified = modHighlight .. ctx.modified.character .. " "
   end
 
@@ -61,8 +62,8 @@ local function leftSection(prefs, current)
   return leftHighlight .. ctx.separator.left.character .. padding
 end
 
-function M.tabLabel(prefs, page, current)
-  local label = labelSection(page, current)
+function M.tabLabel(prefs, page, index, current)
+  local label = labelSection(page, index, current)
   local right = rightSection(prefs, page, current)
   local left = leftSection(prefs, current)
   local ctx = prefs.tab

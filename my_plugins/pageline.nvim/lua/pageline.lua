@@ -30,9 +30,9 @@ end
 local function pageline()
   local line = ""
 
-  for _, page in ipairs(pages.getPages()) do
+  for i, page in ipairs(pages.getPages()) do
     local current = page.id == vim.fn.tabpagenr()
-    line = line .. label.tabLabel(state.prefs, page, current)
+    line = line .. label.tabLabel(state.prefs, page, i, current)
   end
 
   line = line .. '%#PageLineFill#%T'

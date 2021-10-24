@@ -5,7 +5,7 @@ local state = {
     tab = {
       background = "#282c34",
       text = "#999999",
-      padding = 2,
+      padding = 0,
 
       separator = {
         left = {
@@ -31,7 +31,7 @@ local state = {
     current = {
       background = "#61afef",
       text = "#282c34",
-      padding = 2,
+      padding = 0,
 
       separator = {
         left = {

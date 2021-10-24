@@ -15,6 +15,9 @@ local function getBuffers(pageIndex)
   return buffers
 end
 
+local function activeBuffer(page)
+end
+
 local function totalModified(buffers)
   local total = 0
   for _, buf in ipairs(buffers) do
@@ -31,9 +34,13 @@ function M.getPages()
 
   for i = 0, vim.fn.tabpagenr("$") - 1 do
     local buffers = getBuffers(i)
+    local buflist = vim.fn.tabpagebuflist(i + 1)
+    local winnr = vim.fn.tabpagewinnr(i + 1)
+    local filename = vim.fn.bufname(buflist[winnr])
     local page = {
       id = i + 1,
       buffers = buffers,
+      name = string.gsub(filename, "^.*/", ""),
       modified = totalModified(buffers)
     }
 

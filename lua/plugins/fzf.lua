@@ -184,27 +184,29 @@ require'fzf-lua'.setup {
     -- set to '' for a non-value flag
     -- for raw args use `fzf_args` instead
     ['--ansi']        = '',
-    ['--prompt']      = ' >',
+    ['--prompt']      = ' ',
     ['--info']        = 'inline',
     ['--height']      = '100%',
-    ['--layout']      = 'reverse',
+    ['--layout']      = 'default',
   },
+  fzf_raw_args = "--pointer=' ❯'",
+
   -- fzf '--color=' options (optional)
-  --[[ fzf_colors = {
-      ["fg"] = { "fg", "CursorLine" },
-      ["bg"] = { "bg", "Normal" },
+  fzf_colors = {
+      -- ["fg"] = { "fg", "CursorLine" },
+      ["bg"] = { "bg", "ColorColumn" },
       ["hl"] = { "fg", "Comment" },
-      ["fg+"] = { "fg", "Normal" },
-      ["bg+"] = { "bg", "CursorLine" },
-      ["hl+"] = { "fg", "Statement" },
-      ["info"] = { "fg", "PreProc" },
-      ["prompt"] = { "fg", "Conditional" },
-      ["pointer"] = { "fg", "Exception" },
-      ["marker"] = { "fg", "Keyword" },
-      ["spinner"] = { "fg", "Label" },
-      ["header"] = { "fg", "Comment" },
-      ["gutter"] = { "bg", "Normal" },
-  }, ]]
+      -- ["fg+"] = { "fg", "Normal" },
+      ["bg+"] = { "bg", "ColorColumn" },
+      -- ["hl+"] = { "fg", "Statement" },
+      -- ["info"] = { "fg", "PreProc" },
+      -- ["prompt"] = { "fg", "Conditional" },
+      -- ["pointer"] = { "fg", "Exception" },
+      -- ["marker"] = { "fg", "Keyword" },
+      -- ["spinner"] = { "fg", "Label" },
+      -- ["header"] = { "fg", "Comment" },
+      ["gutter"] = { "bg", "ColorColumn" },
+  },
   previewers = {
     cat = {
       cmd             = "cat",

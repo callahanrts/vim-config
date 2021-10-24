@@ -23,6 +23,7 @@ require('plugins.prettier')
 require('plugins.which-key')
 require('plugins.trouble')
 require('plugins.diffview')
+require('plugins.org')
 
 -- LSP
 require('lsp')
@@ -38,6 +39,4 @@ require('treesitter')
 require('plugins.treesitter-refactor')
 
 -- Dev plugins
--- require('plugins.pageline')
-
-
+require('plugins.pageline')
