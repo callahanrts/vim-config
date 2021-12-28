@@ -1,10 +1,7 @@
--- require('colorbuddy').colorscheme('onebuddy')
--- require('theme.icons')
--- require('theme.one_override')
+require('onedark').setup()
 
-vim.cmd([[
-colorscheme onedark
-]])
+-- Set the ColorColumn a little darker than Normal
+vim.cmd("highlight ColorColumn guibg=#21252b")
 
 -- Draw vertical lines to create an 80-120 char background
 if vim.fn.exists('+colorcolumn') then

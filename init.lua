@@ -16,39 +16,16 @@ require('keybindings')
 require('autocmds')
 
 -- plugins
-require('plugins.gitsigns')
-require('plugins.fzf')
-require('plugins.kitty')
-require('plugins.nvim-tree')
-require('plugins.which-key')
 require('plugins.coc')
-
--- Might not need
---+ require('plugins.vim-illuminate')
---+ require('plugins.indent-line')
---+ require('plugins.autopairs')
-
--- Don't really use this currently, but it would be nice
---+ require('plugins.prettier')
-
--- Would use, but has trouble
---+ require('plugins.diffview')
-
--- Don't use, really
---+ require('plugins.tagbar')
---+ require('plugins.codi')
---+ require('plugins.trouble')
---+ require('plugins.treesitter-refactor')
-
--- LSP
--- require('lsp')
--- require('coc')
+require('plugins.fzf')
+require('plugins.gitsigns')
+require('plugins.kitty')
+require('plugins.lualine')
+require('plugins.nvim-tree')
+require('plugins.pageline') -- Dev plugin
+require('plugins.which-key')
 
 -- ui
 require('ui')
 require('theme')
-require('plugins.lualine')
 require('treesitter')
-
--- Dev plugins
-require('plugins.pageline')

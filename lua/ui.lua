@@ -30,8 +30,6 @@ end
 --   ]])
 -- end
 
-
-
 -- MacVim Settings
 if vim.fn.has('gui_macvim') then
   vim.cmd("set guioptions=")
