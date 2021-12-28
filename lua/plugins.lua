@@ -25,14 +25,13 @@ return require('packer').startup(function(use)
   use 'vim-scripts/repeat.vim'     -- Repeat plugin commands (not just native) using .
   use 'tpope/vim-commentary'       -- Comment stuff
   use 'knubie/vim-kitty-navigator' -- Seamless kitty splits
+  -- use 'christoomey/vim-tmux-navigator' -- Seamless tmux splits
   use 'preservim/tagbar'           -- Tagbar
   use 'andymass/vim-matchup'       -- Improve %
   use 'metakirby5/codi.vim'        -- Scratchpad
   use 'sindrets/diffview.nvim'
-  use 'kristijanhusak/orgmode.nvim' -- Org mode
 
   -- Uncomment this if you need to install fzf. It throws an error on the daily
-  use { 'junegunn/fzf', { run = './install --bin' } }
   use 'junegunn/fzf.vim'
   use { 'ibhagwan/fzf-lua',
     requires = {
@@ -41,15 +40,9 @@ return require('packer').startup(function(use)
     } -- optional for icons
   }
 
-  -- use {
-  --   'nvim-telescope/telescope.nvim',
-  --   requires = { {'nvim-lua/plenary.nvim'} }
-  -- }
-
   -- For looks
   use 'tjdevries/colorbuddy.vim'
   use 'Th3Whit3Wolf/onebuddy'
-  -- use 'navarasu/onedark.nvim'
   use 'kyazdani42/nvim-web-devicons' -- Recommended (for coloured icons)
   use 'RRethy/vim-illuminate'        -- Highlight token under cursor
   use { 'lukas-reineke/indent-blankline.nvim' }
@@ -60,34 +53,33 @@ return require('packer').startup(function(use)
   }
   use 'nvim-treesitter/nvim-treesitter-refactor'
 
+  use { 'neoclide/coc.nvim', branch = 'release' }
+
   -- LSP
-  use 'neovim/nvim-lspconfig'
-  use { "kabouzeid/nvim-lspinstall", event = "VimEnter" }
-  -- Install nvim-cmp, and buffer source as a dependency
-  use {
-    "hrsh7th/nvim-cmp",
-    requires = {
-      "hrsh7th/vim-vsnip",
-      "hrsh7th/cmp-buffer",
-      "hrsh7th/cmp-nvim-lsp",
-      "hrsh7th/cmp-path",
-      "hrsh7th/cmp-nvim-lua",
-      -- "hrsh7th/cmp-calc",
-      -- "ray-x/cmp-treesitter",
-      -- "f2fora/cmp-spell",
-      "L3MON4D3/LuaSnip",
-      "saadparwaiz1/cmp_luasnip",
-      -- { 'tzachar/cmp-tabnine', { run = './install.sh' } }
-    }
-  }
+  -- use 'neovim/nvim-lspconfig'
+  -- use { 'williamboman/nvim-lsp-installer' }
+  -- -- Install nvim-cmp, and buffer source as a dependency
+  -- use {
+  --   "hrsh7th/nvim-cmp",
+  --   requires = {
+  --     'hrsh7th/cmp-vsnip',
+  --     "hrsh7th/vim-vsnip",
+  --     "hrsh7th/cmp-buffer",
+  --     "hrsh7th/cmp-nvim-lsp",
+  --     "hrsh7th/cmp-path",
+  --     "hrsh7th/cmp-nvim-lua",
+  --     -- "ray-x/cmp-treesitter",
+  --     -- "f2fora/cmp-spell",
+  --     -- "L3MON4D3/LuaSnip",
+  --     -- "saadparwaiz1/cmp_luasnip",
+  --   }
+  -- }
 
-  use "rafamadriz/friendly-snippets"
+  -- use "rafamadriz/friendly-snippets"
 
-  use 'ray-x/lsp_signature.nvim' -- Signatures in completion
-  use { 'glepnir/lspsaga.nvim', branch = 'main' }
-  use 'onsails/lspkind-nvim'
-  -- Plug 'thomasfaingnaert/vim-lsp-snippets'
-  -- Plug 'thomasfaingnaert/vim-lsp-ultisnips'
+  -- use 'ray-x/lsp_signature.nvim' -- Signatures in completion
+  -- use { 'glepnir/lspsaga.nvim', branch = 'main' }
+  -- use 'onsails/lspkind-nvim'
 
   -- Show menu for leader commands
   use { "folke/which-key.nvim" }

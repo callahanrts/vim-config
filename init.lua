@@ -4,39 +4,51 @@
 -- NVIM lua guide
 -- https://github.com/nanotee/nvim-lua-guide#calling-vimscript-functions
 
+-- NOTE
+-- when nvim-tree, or theme is commented out, the vim welcome text appears.
+-- With both enabled, it disappears after a second
+
 -- core
-require('core.application')
+require('application')
+
 require('plugins')
-require('core.keybindings')
-require('core.autocmds')
+require('keybindings')
+require('autocmds')
 
 -- plugins
-require('plugins.autopairs')
 require('plugins.gitsigns')
 require('plugins.fzf')
--- require('plugins.telescope')
 require('plugins.kitty')
 require('plugins.nvim-tree')
-require('plugins.tagbar')
-require('plugins.codi')
-require('plugins.prettier')
 require('plugins.which-key')
-require('plugins.trouble')
-require('plugins.diffview')
-require('plugins.org')
+require('plugins.coc')
+
+-- Might not need
+--+ require('plugins.vim-illuminate')
+--+ require('plugins.indent-line')
+--+ require('plugins.autopairs')
+
+-- Don't really use this currently, but it would be nice
+--+ require('plugins.prettier')
+
+-- Would use, but has trouble
+--+ require('plugins.diffview')
+
+-- Don't use, really
+--+ require('plugins.tagbar')
+--+ require('plugins.codi')
+--+ require('plugins.trouble')
+--+ require('plugins.treesitter-refactor')
 
 -- LSP
-require('lsp')
+-- require('lsp')
+-- require('coc')
 
 -- ui
 require('ui')
 require('theme')
-require('plugins.vim-illuminate')
-require('plugins.indent-line')
--- require('plugins.galaxyline')
 require('plugins.lualine')
 require('treesitter')
-require('plugins.treesitter-refactor')
 
 -- Dev plugins
 require('plugins.pageline')

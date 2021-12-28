@@ -1,5 +1,4 @@
 local g = vim.g
-g.nvim_tree_ignore = { '.git', '.DS_Store', 'node_modules', '.cache' }
 g.nvim_tree_indent_markers = 1 --"0 by default, this option shows indent markers when folders are open
 g.nvim_tree_auto_ignore_ft = 'startify' --"empty by default, don't auto open tree on specific filetypes.
 g.nvim_tree_side = 'left' -- left by default
@@ -68,6 +67,7 @@ g.nvim_tree_icons = {
 require'nvim-tree'.setup {
   nvim_tree_follow = 1,     -- 0 by default, this option allows the cursor to be updated when entering a buffer
   nvim_tree_auto_close = 1, -- 0 by default, closes the tree when it's the last window
+  nvim_tree_ignore = { '.git', '.DS_Store', 'node_modules', '.cache' },
 --   disable_netrw       = true,
 --   hijack_netrw        = true,
 --   open_on_setup       = false,
