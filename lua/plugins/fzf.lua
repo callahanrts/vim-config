@@ -1,33 +1,3 @@
--- FZF.nvim
-
--- vim.g.fzf_action = {
---   ['ctrl-t'] = 'tab split',
---   ['ctrl-i'] = 'split',
---   ['ctrl-s'] = 'vsplit'
--- }
-
--- vim.cmd([[
--- " Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
--- command! -bang -nargs=* Rg call fzf#vim#grep('rg --column --line-number --no-heading --color=always --smart-case -- '.shellescape(<q-args>), 1, fzf#vim#with_preview(), <bang>0)
--- ]])
-
-
--- Find files (with shortcut)
--- vim.api.nvim_set_keymap('n', '<leader>.', ':Files<cr>', {})
--- vim.api.nvim_set_keymap('n', '<leader>ff', ':Files<cr>', {})
--- vim.api.nvim_set_keymap('n', '<leader>,', ':Rg<space>', {})
-
--- vim.api.nvim_set_keymap('n', '<leader>fb', ':Buffers<cr>', {})
--- vim.api.nvim_set_keymap('n', '<leader>ft', ':Rg<space>', {})
--- vim.api.nvim_set_keymap('n', '<leader>fm', ':Telescope marks<cr>', {})
--- vim.api.nvim_set_keymap('n', '<leader>fn', ':Telescope man_pages<cr>', {})
--- vim.api.nvim_set_keymap('n', '<leader>fj', ':Telescope jumplist<cr>', {})
--- vim.api.nvim_set_keymap('n', '<leader>fr', ':Telescope registers<cr>', {})
--- vim.api.nvim_set_keymap('n', '<leader>fc', ':Telescope current_buffer_fuzzy_find<cr>', {})
--- vim.api.nvim_set_keymap('n', '<leader>fh', ':Telescope help_tags<cr>', {})
-
-
-
 -- Fzf-lua
 
 -- Search 'f'
@@ -242,8 +212,8 @@ require'fzf-lua'.setup {
     -- previewer         = "cat",       -- uncomment to override previewer
     prompt            = 'Files❯ ',
     cmd               = '',             -- "find . -type f -printf '%P\n'",
-    git_icons         = true,           -- show git icons?
-    file_icons        = true,           -- show file icons?
+    git_icons         = false,           -- show git icons?
+    file_icons        = false,           -- show file icons?
     color_icons       = true,           -- colorize file|git icons
     actions = {
       -- set bind to 'false' to disable
@@ -260,16 +230,16 @@ require'fzf-lua'.setup {
     files = {
       prompt          = 'GitFiles❯ ',
       cmd             = 'git ls-files --exclude-standard',
-      git_icons       = true,           -- show git icons?
-      file_icons      = true,           -- show file icons?
+      git_icons       = false,           -- show git icons?
+      file_icons      = false,           -- show file icons?
       color_icons     = true,           -- colorize file|git icons
     },
     status = {
       prompt        = 'GitStatus❯ ',
       cmd           = "git status -s",
       previewer     = "git_diff",
-      file_icons    = true,
-      git_icons     = true,
+      file_icons    = false,
+      git_icons     = false,
       color_icons   = true,
     },
     commits = {
@@ -315,8 +285,8 @@ require'fzf-lua'.setup {
     -- cmd               = "rg --vimgrep",
     rg_opts           = "--hidden --column --line-number --no-heading " ..
                         "--color=always --smart-case -g '!{.git,node_modules}/*'",
-    git_icons         = true,           -- show git icons?
-    file_icons        = true,           -- show file icons?
+    git_icons         = false,           -- show git icons?
+    file_icons        = false,           -- show file icons?
     color_icons       = true,           -- colorize file|git icons
     -- 'true' enables file and git icons in 'live_grep'
     -- degrades performance in large datasets, YMMV
@@ -340,8 +310,8 @@ require'fzf-lua'.setup {
   buffers = {
     -- previewer      = false,        -- disable the builtin previewer?
     prompt            = 'Buffers❯ ',
-    file_icons        = true,         -- show file icons?
-    color_icons       = true,         -- colorize file|git icons
+    file_icons        = false,         -- show file icons?
+    color_icons       = false,         -- colorize file|git icons
     sort_lastused     = true,         -- sort buffers() by last used
     actions = {
       ["default"]     = actions.buf_edit,
@@ -380,20 +350,20 @@ require'fzf-lua'.setup {
   },
   quickfix = {
     -- cwd               = vim.loop.cwd(),
-    file_icons        = true,
-    git_icons         = true,
+    file_icons        = false,
+    git_icons         = false,
   },
   lsp = {
     prompt            = '❯ ',
     -- cwd               = vim.loop.cwd(),
     cwd_only          = false,      -- LSP/diagnostics for cwd only?
     async_or_timeout  = true,       -- timeout(ms) or false for blocking calls
-    file_icons        = true,
+    file_icons        = false,
     git_icons         = false,
-    lsp_icons         = true,
+    lsp_icons         = false,
     severity          = "hint",
     icons = {
-      ["Error"]       = { icon = "", color = "red" },       -- error
+      ["Error"]       = { icon = "", color = "red" },       -- error
       ["Warning"]     = { icon = "", color = "yellow" },    -- warning
       ["Information"] = { icon = "", color = "blue" },      -- info
       ["Hint"]        = { icon = "", color = "magenta" },   -- hint
