@@ -4,11 +4,11 @@
     "title": " syntax",
     "highlight": "Normal"
   },
-  "diagnostic.errorSign": " ",
-  "diagnostic.warningSign": " ",
-  "diagnostic.infoSign": " ",
-  "diagnostic.hintSign": " ",
-  "diagnostic.format": "[%source%code]\n\n%message",
+  "diagnostic.errorSign": "",
+  "diagnostic.warningSign": "",
+  "diagnostic.infoSign": "",
+  "diagnostic.hintSign": "",
+  "diagnostic.format": "%severity: [%source%code]\n\n%message",
 
   "solargraph.diagnostics": true
 }
