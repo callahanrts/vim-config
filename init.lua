@@ -22,7 +22,7 @@ require('plugins.gitsigns')
 require('plugins.kitty')
 require('plugins.lualine')
 require('plugins.nvim-tree')
-require('plugins.pageline') -- Dev plugin
+-- require('plugins.pageline') -- Dev plugin
 require('plugins.which-key')
 
 -- ui
