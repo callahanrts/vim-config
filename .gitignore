@@ -6,6 +6,7 @@ Session.vim
 .netrwhist
 *~
 sessions
+tags
 
 # Repo specific
 autoload
