@@ -9,7 +9,8 @@ sessions
 tags
 
 # Repo specific
-autoload
+autoload/*
+!autoload/plug.vim
 undodir
 backup
 plugged
