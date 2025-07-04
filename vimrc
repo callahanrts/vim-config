@@ -25,16 +25,8 @@ endfor
 source ~/.config/vim/configs/keybindings.vim
 
 " Override vim-one after the colorscheme is changed
-function! has#colorscheme(name) abort
-    let pat = 'colors/'.a:name.'.vim'
-    return !empty(globpath(&rtp, pat))
-endfunction
-
-" .vimrc
-if has#colorscheme('one')
-  command! OneOverride source ~/.config/vim/configs/one_override.vim
-  autocmd ColorScheme * OneOverride
-endif
+command! OneOverride source ~/.config/vim/configs/one_override.vim
+autocmd ColorScheme * OneOverride
 
 " Include neovim gui settings
 source ~/.config/vim/configs/gui.vim
