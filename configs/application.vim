@@ -21,9 +21,9 @@ let mapleader=" "                   " Change leader key to space
 " au TerminalOpen * :set winhighlight=Normal:ColorColumn
 
 if has('unix')
-  set clipboard=unnamedplus         " Share clipboard with macOS
-else
   set clipboard=unnamed             " Share clipboard with macOS
+else
+  set clipboard=unnamedplus         " Share clipboard with linux
 endif
 
 autocmd VimResized * wincmd =       " Automatically resize splits to equal sizes when vim is resized
