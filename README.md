@@ -39,3 +39,25 @@ configs/plugins/gitgutter.vim
 |`<c-t>n`     |Create new tab                 |
 |`<c-t>x`     |Delete a tab                   |
 |`Backspace`  |Switch to last opened buffer   |
+
+
+## Completion
+
+| Key          | Action                |
+|--------------|-----------------------|
+| `gd`         | Go to definition      |
+|--------------|-----------------------|
+| `gr`         | References            |
+|--------------|-----------------------|
+| `K`          | Hover docs            |
+|--------------|-----------------------|
+| `<Leader>ca` | Code action           |
+|--------------|-----------------------|
+| `<Leader>rn` | Rename symbol         |
+|--------------|-----------------------|
+| `[d / ]d`    | Prev/next diagnostic  |
+|--------------|-----------------------|
+| `<C-i>`      | Show diagnostic float |
+|--------------|-----------------------|
+| `<Leader>cd` | Go to documentation   |
+|--------------|-----------------------|

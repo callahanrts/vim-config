@@ -9,11 +9,10 @@ sessions
 tags
 
 # Repo specific
-autoload/*
-!autoload/plug.vim
 undodir
 backup
 plugged
+lazy-lock.json
 shada
 vimwiki
 vimwiki_html
