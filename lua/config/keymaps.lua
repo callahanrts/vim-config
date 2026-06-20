@@ -36,7 +36,7 @@ map("n", "g#", "g#zz")
 
 map("n", "<BS>", "<C-^>")
 
-map({ "n", "v" }, "<Leader>a", ":Tabularize /")
+map({ "n", "v" }, "<Leader>fa", ":Tabularize /")
 
 map({ "n", "v" }, "<Leader>tt", function()
   vim.opt.background = vim.opt.background:get() == "dark" and "light" or "dark"
