@@ -12,7 +12,15 @@ return {
     dependencies = { "nvim-lua/plenary.nvim" },
     cmd = { "DiffviewOpen", "DiffviewClose", "DiffviewToggleFiles", "DiffviewFocusFiles" },
     keys = {
-      { "<Leader>gd",  "<cmd>DiffviewOpen origin/main...HEAD<CR>", desc = "Diff PR vs main" },
+      {
+        "<Leader>gd",
+        function()
+          local ref = vim.fn.systemlist("git symbolic-ref refs/remotes/origin/HEAD --short 2>/dev/null")
+          local base = (ref and ref[1] and ref[1] ~= "") and ref[1] or "origin/main"
+          vim.cmd("DiffviewOpen " .. base .. "...HEAD")
+        end,
+        desc = "Diff vs default branch",
+      },
       { "<Leader>gdd", "<cmd>DiffviewClose<CR>",                   desc = "Close diffview" },
     },
     config = function()

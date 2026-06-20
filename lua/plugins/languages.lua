@@ -1,13 +1,26 @@
 return {
-  { "vim-ruby/vim-ruby",         ft = "ruby" },
-  { "cakebaker/scss-syntax.vim", ft = "scss" },
-  { "JulesWang/css.vim",         ft = "css" },
-  { "kchmck/vim-coffee-script",  ft = "coffee" },
-  { "tpope/vim-haml",            ft = "haml" },
-  { "posva/vim-vue" },
-  { "yuezk/vim-js" },
-  { "leafgarland/typescript-vim" },
-  { "ElmCast/elm-vim" },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    config = function()
+      require("nvim-treesitter").setup({
+        ensure_installed = {
+          "ruby", "erb", "html", "css", "scss",
+          "javascript", "typescript", "tsx",
+          "json", "yaml", "lua", "vim", "vimdoc",
+          "markdown", "markdown_inline",
+        },
+        auto_install = true,
+        highlight = { enable = true },
+        indent = { enable = true },
+      })
+    end,
+  },
+
+  { "tpope/vim-rails",             ft = { "ruby", "eruby" } },
+  { "tpope/vim-haml",              ft = "haml" },
+  { "kchmck/vim-coffee-script",    ft = "coffee" },
+  { "ElmCast/elm-vim",             ft = "elm" },
 
   {
     "plasticboy/vim-markdown",

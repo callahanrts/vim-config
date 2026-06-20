@@ -108,13 +108,37 @@ Octo opens GitHub PRs and issues as real editable buffers. Requires `gh` CLI aut
 
 Comments are edited inline in the buffer and submitted with `:w`.
 
+### PR Review Workflow
 
-```
-  The full workflow would be:
+1. `<Leader>gpl` — pick a PR from the telescope list
+2. `<Leader>gpc` — check out the branch (so you can run the code)
+3. `<Leader>gd` — open diffview file tree + diffs against main
+4. Review files, add Octo comments inline
+5. `<Leader>grc` — submit review
 
-  1. <Leader>gpl — pick a PR from the list
-  2. <Leader>gpc — check out the branch (now you can run the code)
-  3. :DiffviewOpen origin/main...HEAD — opens the file tree + diffs for the PR
-  4. Review files, mark viewed, add Octo comments inline
-  5. <Leader>grc — submit review
-```
+## Claude Code (claudecode.nvim)
+
+Brings Claude Code into Neovim via the same WebSocket MCP protocol used by the VS Code extension. Opens Claude in a terminal split and supports sending context (buffers, selections, files) directly from the editor.
+
+### Keybindings
+
+| Key | Action |
+|-----|--------|
+| `<M-b>` / `<Leader>ll` | Toggle Claude terminal |
+| `<Leader>lf` | Focus Claude terminal |
+| `<Leader>lr` | Resume last session |
+| `<Leader>lC` | Continue last session |
+| `<Leader>lm` | Select model |
+| `<Leader>lb` | Add current buffer as context |
+| `<Leader>ls` | Send visual selection to Claude |
+| `<Leader>la` | Accept diff suggested by Claude |
+| `<Leader>ld` | Deny diff suggested by Claude |
+
+### Workflow
+
+1. `<M-b>` — open Claude in a terminal split
+2. Write your prompt and hit `Enter` as normal
+3. When Claude edits files, a diff view opens automatically
+4. `<Leader>la` / `<Leader>ld` to accept or reject each change
+5. In visual mode, select code and `<Leader>ls` to send it as context
+6. `<Leader>lb` to add the entire current buffer to the conversation

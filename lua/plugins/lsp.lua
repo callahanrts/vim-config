@@ -14,7 +14,7 @@ return {
         "pyright",
         "rust_analyzer",
         "rubocop",
-        "eslint-lsp",
+        "eslint",
       },
       automatic_installation = true,
     },
@@ -38,6 +38,15 @@ return {
           },
         },
       })
+
+      local function set_diagnostic_highlights()
+        vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", { undercurl = true, sp = "#e06c75" })
+        vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn",  { undercurl = true, sp = "#d19a66" })
+        vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo",  { undercurl = true, sp = "#61afef" })
+        vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint",  { undercurl = true, sp = "#98c379" })
+      end
+      set_diagnostic_highlights()
+      vim.api.nvim_create_autocmd("ColorScheme", { callback = set_diagnostic_highlights })
 
       vim.lsp.config("*", {
         capabilities = require("cmp_nvim_lsp").default_capabilities(),

@@ -1,0 +1,37 @@
+return {
+  {
+    "coder/claudecode.nvim",
+    dependencies = { "folke/snacks.nvim" },
+    opts = {
+      terminal_cmd = "/Users/codycallahan/.local/bin/claude",
+    },
+    cmd = {
+      "ClaudeCode",
+      "ClaudeCodeFocus",
+      "ClaudeCodeSelectModel",
+      "ClaudeCodeAdd",
+      "ClaudeCodeSend",
+      "ClaudeCodeTreeAdd",
+      "ClaudeCodeStatus",
+      "ClaudeCodeStart",
+      "ClaudeCodeStop",
+      "ClaudeCodeOpen",
+      "ClaudeCodeClose",
+      "ClaudeCodeDiffAccept",
+      "ClaudeCodeDiffDeny",
+      "ClaudeCodeCloseAllDiffs",
+    },
+    keys = {
+      { "<M-b>",       "<cmd>ClaudeCode<cr>",            desc = "Toggle Claude" },
+      { "<Leader>ll", "<cmd>ClaudeCode<cr>",            desc = "Toggle Claude" },
+      { "<Leader>lf", "<cmd>ClaudeCodeFocus<cr>",       desc = "Focus Claude" },
+      { "<Leader>lr", "<cmd>ClaudeCode --resume<cr>",   desc = "Resume session" },
+      { "<Leader>lC", "<cmd>ClaudeCode --continue<cr>", desc = "Continue session" },
+      { "<Leader>lm", "<cmd>ClaudeCodeSelectModel<cr>", desc = "Select model" },
+      { "<Leader>lb", "<cmd>ClaudeCodeAdd %<cr>",       desc = "Add current buffer" },
+      { "<Leader>ls", "<cmd>ClaudeCodeSend<cr>",        mode = "v", desc = "Send selection" },
+      { "<Leader>la", "<cmd>ClaudeCodeDiffAccept<cr>",  desc = "Accept diff" },
+      { "<Leader>ld", "<cmd>ClaudeCodeDiffDeny<cr>",    desc = "Deny diff" },
+    },
+  },
+}

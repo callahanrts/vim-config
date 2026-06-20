@@ -6,10 +6,14 @@ return {
       vim.g.tmux_navigator_no_mappings = 1
     end,
     keys = {
-      { "<C-h>", "<cmd>TmuxNavigateLeft<CR>",  silent = true },
-      { "<C-j>", "<cmd>TmuxNavigateDown<CR>",  silent = true },
-      { "<C-k>", "<cmd>TmuxNavigateUp<CR>",    silent = true },
-      { "<C-l>", "<cmd>TmuxNavigateRight<CR>", silent = true },
+      { "<C-h>", "<cmd>TmuxNavigateLeft<CR>",              silent = true },
+      { "<C-j>", "<cmd>TmuxNavigateDown<CR>",              silent = true },
+      { "<C-k>", "<cmd>TmuxNavigateUp<CR>",                silent = true },
+      { "<C-l>", "<cmd>TmuxNavigateRight<CR>",             silent = true },
+      { "<C-h>", "<C-\\><C-n><cmd>TmuxNavigateLeft<CR>",  mode = "t", silent = true },
+      { "<C-j>", "<C-\\><C-n><cmd>TmuxNavigateDown<CR>",  mode = "t", silent = true },
+      { "<C-k>", "<C-\\><C-n><cmd>TmuxNavigateUp<CR>",    mode = "t", silent = true },
+      { "<C-l>", "<C-\\><C-n><cmd>TmuxNavigateRight<CR>", mode = "t", silent = true },
     },
   },
   {
@@ -21,10 +25,14 @@ return {
       vim.g.kitty_navigator_no_mappings = 1
     end,
     keys = {
-      { "<C-h>", "<cmd>KittyNavigateLeft<CR>",  silent = true },
-      { "<C-j>", "<cmd>KittyNavigateDown<CR>",  silent = true },
-      { "<C-k>", "<cmd>KittyNavigateUp<CR>",    silent = true },
-      { "<C-l>", "<cmd>KittyNavigateRight<CR>", silent = true },
+      { "<C-h>", "<cmd>KittyNavigateLeft<CR>",              silent = true },
+      { "<C-j>", "<cmd>KittyNavigateDown<CR>",              silent = true },
+      { "<C-k>", "<cmd>KittyNavigateUp<CR>",                silent = true },
+      { "<C-l>", "<cmd>KittyNavigateRight<CR>",             silent = true },
+      { "<C-h>", "<C-\\><C-n><cmd>KittyNavigateLeft<CR>",  mode = "t", silent = true },
+      { "<C-j>", "<C-\\><C-n><cmd>KittyNavigateDown<CR>",  mode = "t", silent = true },
+      { "<C-k>", "<C-\\><C-n><cmd>KittyNavigateUp<CR>",    mode = "t", silent = true },
+      { "<C-l>", "<C-\\><C-n><cmd>KittyNavigateRight<CR>", mode = "t", silent = true },
     },
   },
 }
